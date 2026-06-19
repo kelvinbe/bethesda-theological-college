@@ -87,10 +87,10 @@ export default function Navbar() {
                   <Drawer.Body>
                     <VStack align="start" gap={5}>
                       <Link href="/">Home</Link>
-                      <Link href="/about">About</Link>
-                      <Link href="/academics">Academics</Link>
-                      <Link href="/admissions">Admissions</Link>
-                      <Link href="/partnerships">Partnerships</Link>
+                      <Link href="/">About</Link>
+                      <Link href="/">Academics</Link>
+                      <Link href="/">Admissions</Link>
+                      <Link href="/">Partnerships</Link>
 
                       <Button
                         mt={4}
