@@ -191,6 +191,18 @@ export default function Footer() {
             <Link href="/accessibility">
               Accessibility
             </Link>
+          <Text
+  fontSize="sm"
+  color="gray.400"
+  display="flex"
+  alignItems="center"
+  gap={1}
+>
+  Made with <Box as="span" color="red.400">♥</Box> by Beno
+</Text>
+
+
+
           </HStack>
         </Box>
       </Container>
