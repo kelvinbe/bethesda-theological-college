@@ -15,8 +15,11 @@ import {
 } from "@chakra-ui/react";
 
 export default function Footer() {
+
+    const textColor = 'white'
+
   return (
-    <Box bg="green.950" color="white" mt={24}>
+    <Box bg="green.950" color="white" >
       <Container maxW="7xl">
         {/* Main Footer */}
         <Grid
@@ -51,23 +54,23 @@ export default function Footer() {
             </Heading>
 
             <Stack gap={2}>
-              <Link as={NextLink} href="/about">
+              <Link as={NextLink} color={textColor} href="/about">
                 About Us
               </Link>
 
-              <Link as={NextLink} href="/academics">
+              <Link as={NextLink} color={textColor} href="/academics">
                 Academics
               </Link>
 
-              <Link as={NextLink} href="/admissions">
+              <Link as={NextLink} color={textColor} href="/admissions">
                 Admissions
               </Link>
 
-              <Link as={NextLink} href="/partnerships">
+              <Link as={NextLink}color={textColor} href="/partnerships">
                 Partnerships
               </Link>
 
-              <Link as={NextLink} href="/contact">
+              <Link as={NextLink} color={textColor} href="/contact">
                 Contact
               </Link>
             </Stack>
@@ -80,23 +83,23 @@ export default function Footer() {
             </Heading>
 
             <Stack gap={2}>
-              <Link as={NextLink} href="/statement-of-faith">
+              <Link as={NextLink} color={textColor}  href="/statement-of-faith">
                 Statement of Faith
               </Link>
 
-              <Link as={NextLink} href="/impact">
+              <Link as={NextLink} color={textColor} href="/impact">
                 Impact Stories
               </Link>
 
-              <Link as={NextLink} href="/reports">
+              <Link as={NextLink} color={textColor} href="/reports">
                 Annual Reports
               </Link>
 
-              <Link as={NextLink} href="/student-portal">
+              <Link as={NextLink} color={textColor} href="/student-portal">
                 Student Portal
               </Link>
 
-              <Link as={NextLink} href="/news">
+              <Link as={NextLink} color={textColor} href="/news">
                 News & Updates
               </Link>
             </Stack>
