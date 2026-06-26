@@ -35,9 +35,9 @@ export default function Partners() {
       <Box
         position="absolute"
         inset={0}
-        bgImage="url('/partners-bg.jpg')"   // dark main image
+        bgImage="url('/pattern.png')"   // dark main image
         bgSize="cover"
-        bgPosition="center"
+        backgroundPosition="center"
         zIndex={0}
       />
 
