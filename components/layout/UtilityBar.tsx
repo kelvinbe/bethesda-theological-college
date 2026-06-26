@@ -1,30 +1,40 @@
 "use client";
 
-import { Box, Button, Container, HStack, Link } from "@chakra-ui/react";
+import { Box, Button, Container, HStack, Link,  } from "@chakra-ui/react";
+import { Dropdown } from "../Navbar";
+
+const partner = ["Adjunct Faculty", "Donate Books", "Give"];
+
 
 export default function UtilityBar() {
   return (
-    <Box bg="brand.500" color="white" py={2}>
-      <Container maxW="7xl">
+    <Box 
+            style={{padding: 0 }}
+
+    bg="black" color="white"  borderRadius={2} borderColor={'red'} className="" py={0}>
+
+      <Box w="auto">
         <HStack
           justify="flex-end"
-          gap={4}
+          gap={1}
           flexWrap={{ base: "wrap", md: "nowrap" }}
           fontSize={{ base: "sm", md: "md" }}
         >
-          <Link href="/portal">Student Portal</Link>
-          <Link href="/contact">Contact</Link>
 
-          <Button
+      <Button
             size="sm"
             bg="gold.500"
             color="black"
             w={{ base: "full", md: "auto" }}
           >
-            Give / Donate
-          </Button>
+         <Dropdown
+                      label="Partner"
+                      items={partner}
+                      color="white"
+                    />
+                    </Button>
         </HStack>
-      </Container>
+      </Box>
     </Box>
   );
 }

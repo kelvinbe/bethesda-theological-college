@@ -1,18 +1,24 @@
-import UtilityBar from "../components/layout/UtilityBar";
+import UtilityBar from "@/components/layout/UtilityBar";
 import Navbar from "@/components/Navbar";
-import Hero from "@/components/Hero";
+import HeroVideo from "@/components/Hero";
+import WhyBTC from "@/components/WhyBtc";
+import AugustineQuote from "@/components/AugustineQuote";
+import MinistryCall from "@/components/MinistryCall";
+import Accreditation from "@/components/Accreditation";
+import Partners from "@/components/Partners";
 import Footer from "@/components/Footer";
 
 export default function HomePage() {
   return (
     <>
-      <UtilityBar />
-      <Navbar />
 
-      <Hero />
-  
+      <HeroVideo />
+      <WhyBTC />
+      <AugustineQuote />
+      <MinistryCall />
+      <Accreditation />
+      <Partners />
 
-      <Footer />
     </>
   );
 }

@@ -10,11 +10,11 @@ export const system = createSystem(defaultConfig, {
           200: { value: "#9bbba3" },
           300: { value: "#6f9a7a" },
           400: { value: "#4c7a5a" },
-          500: { value: "#0B2E14" }, // Savannah Green (PRIMARY)
           600: { value: "#082711" },
           700: { value: "#061f0e" },
           800: { value: "#04170a" },
           900: { value: "#021006" },
+          500: { value: "#0B2E14" },
         },
 
         gold: {
@@ -22,7 +22,9 @@ export const system = createSystem(defaultConfig, {
         },
 
         earth: {
+           // Savannah Green (PRIMARY)
           500: { value: "#7A4A2A" }, // Bark Brown
+
         },
 
         clay: {

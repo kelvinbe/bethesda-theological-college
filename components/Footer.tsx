@@ -12,16 +12,23 @@ import {
   Text,
   HStack,
   Button,
+  Icon,
 } from "@chakra-ui/react";
+import {
+  FaFacebook,
+  FaInstagram,
+  FaXTwitter,
+  FaYoutube,
+  FaLinkedin,
+} from "react-icons/fa6";
 
 export default function Footer() {
-
-    const textColor = 'white'
-
   return (
-    <Box bg="green.950" color="white" >
+    <Box bg="black" color="white">
+
       <Container maxW="7xl">
-        {/* Main Footer */}
+
+        {/* MAIN FOOTER */}
         <Grid
           templateColumns={{
             base: "1fr",
@@ -30,7 +37,8 @@ export default function Footer() {
           gap={10}
           py={16}
         >
-          {/* College Info */}
+
+          {/* ABOUT */}
           <GridItem>
             <Heading size="md" mb={4}>
               Bethesda Theological College
@@ -41,71 +49,76 @@ export default function Footer() {
             </Text>
 
             <Text color="gray.400" fontSize="sm">
-              Equipping pastors, church leaders, and communities
-              through biblical, theological, and vocational
-              education.
+              We equip pastors, ministry leaders, and believers
+              with sound biblical, theological, and practical training
+              to serve the Church and society effectively.
             </Text>
+
+            {/* SOCIALS */}
+            <HStack mt={5} gap={4}>
+              <Link href="#" _hover={{ color: "yellow.400" }}>
+                <Icon as={FaFacebook} boxSize={5} />
+              </Link>
+
+              <Link href="#" _hover={{ color: "yellow.400" }}>
+                <Icon as={FaInstagram} boxSize={5} />
+              </Link>
+
+              <Link href="#" _hover={{ color: "yellow.400" }}>
+                <Icon as={FaXTwitter} boxSize={5} />
+              </Link>
+
+              <Link href="#" _hover={{ color: "yellow.400" }}>
+                <Icon as={FaYoutube} boxSize={5} />
+              </Link>
+
+              <Link href="#" _hover={{ color: "yellow.400" }}>
+                <Icon as={FaLinkedin} boxSize={5} />
+              </Link>
+            </HStack>
           </GridItem>
 
-          {/* Quick Links */}
+          {/* QUICK LINKS */}
           <GridItem>
             <Heading size="sm" mb={4}>
-              Explore
+              Quick Links
             </Heading>
 
             <Stack gap={2}>
-              <Link as={NextLink} color={textColor} href="/about">
+              <Link as={NextLink} href="/about" color="gray.300">
                 About Us
               </Link>
-
-              <Link as={NextLink} color={textColor} href="/academics">
-                Academics
-              </Link>
-
-              <Link as={NextLink} color={textColor} href="/admissions">
+              <Link as={NextLink} href="/" color="gray.300">
                 Admissions
               </Link>
-
-              <Link as={NextLink}color={textColor} href="/partnerships">
-                Partnerships
-              </Link>
-
-              <Link as={NextLink} color={textColor} href="/contact">
+              <Link as={NextLink} href="/" color="gray.300">
                 Contact
+              </Link>
+              <Link as={NextLink} href="/" color="gray.300">
+                News & Events
+              </Link>
+              <Link as={NextLink} href="/" color="gray.300">
+                Student Portal
               </Link>
             </Stack>
           </GridItem>
 
-          {/* Resources */}
+          {/* PROGRAMS */}
           <GridItem>
             <Heading size="sm" mb={4}>
-              Resources
+              Programs
             </Heading>
 
             <Stack gap={2}>
-              <Link as={NextLink} color={textColor}  href="/statement-of-faith">
-                Statement of Faith
-              </Link>
-
-              <Link as={NextLink} color={textColor} href="/impact">
-                Impact Stories
-              </Link>
-
-              <Link as={NextLink} color={textColor} href="/reports">
-                Annual Reports
-              </Link>
-
-              <Link as={NextLink} color={textColor} href="/student-portal">
-                Student Portal
-              </Link>
-
-              <Link as={NextLink} color={textColor} href="/news">
-                News & Updates
-              </Link>
+              <Text color="gray.300">Diploma in Theology</Text>
+              <Text color="gray.300">Bachelor of Theology</Text>
+              <Text color="gray.300">Masters in Divinity</Text>
+              <Text color="gray.300">Church Leadership</Text>
+              <Text color="gray.300">Christian Counseling</Text>
             </Stack>
           </GridItem>
 
-          {/* Contact */}
+          {/* CONTACT */}
           <GridItem>
             <Heading size="sm" mb={4}>
               Contact
@@ -124,42 +137,26 @@ export default function Footer() {
                 +254 XXX XXX XXX
               </Text>
 
+              <Text color="gray.400" fontSize="sm" mt={2}>
+                Office Hours: Mon - Fri (8:00 AM - 5:00 PM)
+              </Text>
+
               <Button
                 mt={3}
                 colorScheme="yellow"
                 size="sm"
                 width="fit-content"
               >
-                Give / Donate
+                Partner With Us
               </Button>
             </Stack>
           </GridItem>
         </Grid>
 
-        {/* Accreditation & Partners */}
-        {/* <Divider borderColor="whiteAlpha.300" /> */}
+        {/* DIVIDER LINE */}
+        <Box borderTop="1px solid rgba(255,255,255,0.1)" />
 
-        <Box py={8} divideY="2px">
-          <Heading size="sm" mb={4}>
-            Accreditation & Partners
-          </Heading>
-
-          <HStack
-            gap={6}
-            flexWrap="wrap"
-            color="gray.400"
-          >
-            <Text>TVETA</Text>
-            <Text>ISO Certification</Text>
-            <Text>Crossway</Text>
-            <Text>Ligonier</Text>
-            <Text>Christianbook</Text>
-          </HStack>
-        </Box>
-
-        {/* <Divider borderColor="whiteAlpha.300" /> */}
-
-        {/* Bottom Bar */}
+        {/* BOTTOM BAR */}
         <Box
           py={6}
           display="flex"
@@ -174,35 +171,27 @@ export default function Footer() {
           }}
           gap={4}
         >
-          <Text color="gray.500" fontSize="sm">
+          <Text color="gray.400" fontSize="sm">
             © {new Date().getFullYear()} Bethesda Theological College.
             All Rights Reserved.
           </Text>
 
-          <HStack gap={6}>
-            <Link href="/privacy-policy">
+          <HStack gap={6} flexWrap="wrap">
+            <Link href="/privacy-policy" color="gray.400">
               Privacy Policy
             </Link>
 
-            <Link href="/terms">
+            <Link href="/terms" color="gray.400">
               Terms of Use
             </Link>
 
-            <Link href="/accessibility">
+            <Link href="/accessibility" color="gray.400">
               Accessibility
             </Link>
-          <Text
-  fontSize="sm"
-  color="gray.400"
-  display="flex"
-  alignItems="center"
-  gap={1}
->
-  Made with <Box as="span" color="red.400">♥</Box> by Beno
-</Text>
 
-
-
+            <Text fontSize="sm" color="gray.400" display="flex" alignItems="center" gap={1}>
+              Made with <Box as="span" color="red.400">♥</Box> by Beno
+            </Text>
           </HStack>
         </Box>
       </Container>
