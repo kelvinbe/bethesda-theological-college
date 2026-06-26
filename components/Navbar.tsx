@@ -243,7 +243,7 @@ export default function Navbar() {
       <Drawer.Root
         open={open}
         onOpenChange={(e) => setOpen(e.open)}
-        placement="right"
+        // placement={}
       >
         <Drawer.Backdrop />
 
@@ -264,9 +264,10 @@ export default function Navbar() {
 
             <Drawer.Body>
               <VStack align="start" gap={6}>
-                <Link color="white">About</Link>
+                <Link href="/" color="white">Home</Link>
 
-                <Link color="white">Library</Link>
+                <Link href="/about" color="white">About</Link>
+
 
                 <Dropdown
                   label="Academics"
@@ -274,11 +275,7 @@ export default function Navbar() {
                   color="white"
                 />
 
-                <Dropdown
-                  label="Calendar"
-                  items={calendar}
-                  color="white"
-                />
+
 
                 <Dropdown
                   label="Updates"
