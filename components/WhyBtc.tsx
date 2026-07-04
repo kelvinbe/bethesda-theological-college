@@ -12,7 +12,7 @@ Text,
 export default function WhyBTC() {
 return ( <Box py={24} bg="white"> <Container maxW="7xl"> <Stack gap={8}>
 <Heading
-color="earth.500"
+color="gold.500"
 textAlign="center"
 fontSize={{ base: "2xl", md: "4xl" }}
 >
@@ -50,7 +50,7 @@ market-relevant skills needed to sustain their ministries or uplift their local 
         >
           <Heading
             size="lg"
-            color="earth.500"
+            color="gold.500"
             mb={4}
           >
             Holistic Equipping
@@ -70,7 +70,7 @@ market-relevant skills needed to sustain their ministries or uplift their local 
         >
           <Heading
             size="lg"
-            color="earth.500"
+            color="gold.500"
             mb={4}
           >
             Sustainable Impact
@@ -92,7 +92,7 @@ market-relevant skills needed to sustain their ministries or uplift their local 
         >
           <Heading
             size="lg"
-            color="earth.500"
+            color="gold.500"
             mb={4}
           >
             Accessible Learning

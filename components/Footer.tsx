@@ -24,7 +24,7 @@ import {
 
 export default function Footer() {
   return (
-    <Box bg="black" color="white">
+    <Box bg="brand.700" color="white">
 
       <Container maxW="7xl">
 

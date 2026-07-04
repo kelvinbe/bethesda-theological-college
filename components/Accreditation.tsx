@@ -17,7 +17,7 @@ const accreditations = [
 ];
 
 export default function Accreditation() {
-return ( <Box bg="earth.500" py={24}> <Container maxW="7xl"> <Stack gap={12}>
+return ( <Box bg="brand.500" py={24}> <Container maxW="7xl"> <Stack gap={12}>
 <Heading
 textAlign="center"
 color="gold.500"

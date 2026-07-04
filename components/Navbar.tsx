@@ -110,7 +110,7 @@ export default function Navbar() {
   return (
     <>
       <Box position="sticky" top="0" zIndex="1000">
-        <Box bg="black" boxShadow="sm">
+        <Box bg="brand.700" boxShadow="sm">
           <Container maxW="7xl">
             <HStack
               align={{ base: "stretch", md: "stretch" }}

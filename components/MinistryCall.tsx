@@ -33,15 +33,15 @@ export default function MinistryCall() {
             />{" "}
           </Box>
           <Stack flex="1" gap={6}>
-            <Heading color="earth.500" fontSize={{ base: "2xl", md: "3xl" }}>
+            <Heading color="earth.500" fontSize={{ base: "2xl", md: "4xl" }}>
               Discern Your Call to Ministry
             </Heading>
 
-            <Text color="brand.500" fontSize="lg">
+            <Text color="brand.500" fontSize="2xl">
               What does it mean to be called to ministry?
             </Text>
 
-            <Text color="brand.500" fontSize="lg">
+            <Text color="brand.500" fontSize="xl">
               How can you tell for certain you are called?
             </Text>
 
