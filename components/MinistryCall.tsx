@@ -13,16 +13,13 @@ import {
 export default function MinistryCall() {
   return (
     <Box bg="white" py={24}>
-      {" "}
       <Container maxW="7xl">
         <Stack
           direction={{ base: "column", lg: "row" }}
           gap={16}
           align="center"
         >
-          {" "}
           <Box flex="1">
-            {" "}
             <Image
               src="pray.jpeg"
               alt="Ministry Call"
@@ -30,20 +27,46 @@ export default function MinistryCall() {
               border="2px solid"
               borderColor="gold.500"
               boxShadow="lg"
-            />{" "}
+            />
           </Box>
+
           <Stack flex="1" gap={6}>
             <Heading color="earth.500" fontSize={{ base: "2xl", md: "4xl" }}>
               Discern Your Call to Ministry
             </Heading>
 
-            <Text color="brand.500" fontSize="2xl">
+            {/* Converted to buttons */}
+            <Button
+              variant="outline"
+              borderColor="brand.500"
+              color="brand.500"
+              justifyContent="flex-start"
+              size="lg"
+              _hover={{
+                bg: "brand.500",
+                color: "white",
+              }}
+              whiteSpace="normal"
+              textAlign="left"
+            >
               What does it mean to be called to ministry?
-            </Text>
+            </Button>
 
-            <Text color="brand.500" fontSize="xl">
+            <Button
+              variant="outline"
+              borderColor="brand.500"
+              color="brand.500"
+              justifyContent="flex-start"
+              size="lg"
+              _hover={{
+                bg: "brand.500",
+                color: "white",
+              }}
+              whiteSpace="normal"
+              textAlign="left"
+            >
               How can you tell for certain you are called?
-            </Text>
+            </Button>
 
             <Text color="brand.500">
               We walk with students through spiritual formation, academic
