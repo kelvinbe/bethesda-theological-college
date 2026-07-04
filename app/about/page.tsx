@@ -17,7 +17,7 @@ import {
 
 export default function AboutPage() {
   return (
-    <Box bg="earth.500" color="white">
+    <Box bg="brand.500" color="white">
       <Box
         minH="100vh"
         bgImage="url('/bible.jpeg')"
