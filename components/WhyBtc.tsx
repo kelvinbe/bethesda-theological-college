@@ -2,12 +2,13 @@
 
 import {
   Box,
+  Button,
   Container,
   Heading,
+  Image,
   SimpleGrid,
   Stack,
   Text,
-  Image,
 } from "@chakra-ui/react";
 
 const cards = [
@@ -74,6 +75,8 @@ export default function WhyBTC() {
                 borderColor="gold.500"
                 shadow="lg"
                 bg="white"
+                display="flex"
+                flexDirection="column"
                 transition="all 0.3s"
                 _hover={{
                   transform: "translateY(-6px)",
@@ -88,7 +91,12 @@ export default function WhyBTC() {
                   objectFit="cover"
                 />
 
-                <Box p={8}>
+                <Box
+                  p={8}
+                  display="flex"
+                  flexDirection="column"
+                  flex="1"
+                >
                   <Heading
                     size="lg"
                     color="gold.500"
@@ -97,9 +105,26 @@ export default function WhyBTC() {
                     {card.title}
                   </Heading>
 
-                  <Text color="brand.500" lineHeight="tall">
+                  <Text
+                    color="brand.500"
+                    lineHeight="tall"
+                    flex="1"
+                  >
                     {card.description}
                   </Text>
+
+                  <Button
+                    mt={6}
+                    alignSelf="flex-start"
+                    bg="gold.500"
+                    color="white"
+                    size="md"
+                    _hover={{
+                      bg: "gold.600",
+                    }}
+                  >
+                    Learn More
+                  </Button>
                 </Box>
               </Box>
             ))}
