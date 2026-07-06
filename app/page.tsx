@@ -7,6 +7,10 @@ import MinistryCall from "@/components/MinistryCall";
 import Accreditation from "@/components/Accreditation";
 import Partners from "@/components/Partners";
 import Footer from "@/components/Footer";
+import { Progress } from "@chakra-ui/react";
+import Programs from "@/components/Programs";
+import CallToAction from "@/components/Call";
+import QuickLinks from "@/components/Quicklinks";
 
 export default function HomePage() {
   return (
@@ -16,7 +20,10 @@ export default function HomePage() {
       <WhyBTC />
       <AugustineQuote />
       <MinistryCall />
+      <Programs />
+      <CallToAction />
       <Accreditation />
+      <QuickLinks />
       <Partners />
 
     </>

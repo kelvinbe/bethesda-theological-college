@@ -11,11 +11,26 @@ import {
 import { keyframes } from "@emotion/react";
 
 const partners = [
-  "cba.png",
-  "ida.png",
-  "logo.svg",
-  "ligonair.png",
-  "cb.png",
+  {
+    name: "Crossway",
+    logo: "crossway.jpeg",
+  },
+  {
+    name: "Intentional Discipling Africa (IDA)",
+    logo: "ida.png",
+  },
+  {
+    name: "Injili Ministries",
+    logo: "logo.svg",
+  },
+  {
+    name: "Ligonier",
+    logo: "ligonair.png",
+  },
+  {
+    name: "Christianbook",
+    logo: "cb.png",
+  },
 ];
 
 const scroll = keyframes`
@@ -35,33 +50,34 @@ export default function Partners() {
       <Box
         position="absolute"
         inset={0}
-        bgImage="url('/pattern.png')"   // dark main image
+        bgImage="url('/pattern.png')"
         bgSize="cover"
-        backgroundPosition="center"
+        bgPosition="center"
         zIndex={0}
       />
 
-      {/* Pattern overlay layer */}
+      {/* Overlay pattern */}
       <Box
         position="absolute"
         inset={0}
         bgImage="url('/pattern.png')"
         bgRepeat="repeat"
-        opacity={0.15}
+        opacity={0.12}
         zIndex={1}
       />
 
-      {/* Dark overlay for readability */}
+      {/* Dark overlay */}
       <Box
         position="absolute"
         inset={0}
-        bg="linear-gradient(to bottom, rgba(0,0,0,0.8), rgba(0,0,0,0.6))"
+        bg="linear-gradient(to bottom, rgba(11,46,20,0.92), rgba(11,46,20,0.85))"
         zIndex={2}
       />
 
       {/* Content */}
       <Container maxW="7xl" position="relative" zIndex={3}>
         <Stack gap={12}>
+          {/* Heading */}
           <Heading
             textAlign="center"
             color="gold.500"
@@ -70,13 +86,14 @@ export default function Partners() {
             Our Partners
           </Heading>
 
+          {/* Slider */}
           <Box overflow="hidden" position="relative">
             <HStack
               gap={8}
               w="max-content"
-              animation={`${scroll} 20s linear infinite`}
+              animation={`${scroll} 25s linear infinite`}
             >
-              {[...partners, ...partners].map((logo, i) => (
+              {[...partners, ...partners].map((partner, i) => (
                 <Box
                   key={i}
                   minW="220px"
@@ -87,15 +104,20 @@ export default function Partners() {
                   display="flex"
                   alignItems="center"
                   justifyContent="center"
-                  transition="all .3s"
+                  transition="all 0.35s ease"
+                  filter="grayscale(100%) opacity(0.65)"
                   _hover={{
-                    transform: "translateY(-6px)",
+                    transform: "translateY(-8px)",
                     boxShadow: "xl",
+                    filter: "grayscale(0%) opacity(1)",
+                    borderColor: "gold.500",
                   }}
+                  border="1px solid"
+                  borderColor="transparent"
                 >
                   <Image
-                    src={logo}
-                    alt="Partner logo"
+                    src={partner.logo}
+                    alt={partner.name}
                     maxH="60px"
                     objectFit="contain"
                   />
