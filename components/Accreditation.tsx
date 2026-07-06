@@ -14,7 +14,7 @@ const accreditations = [
   { name: "TVETA", img: "tiveta.png" },
   { name: "EAK", img: "eak.png" },
   { name: "ISO Certification", img: "iso.jpeg" },
-  { name: "Kenya Counseling and Psychological Association", img: "kpca.jpeg" },
+  { name: "KCPA", img: "kpca.jpeg" },
 ];
 
 export default function Accreditation() {
