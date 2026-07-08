@@ -40,7 +40,7 @@ const programs = [
   {
     title: "Certificates & Diplomas",
     description:
-      "Our certificates and diplomas provide a solid, gospel-centered foundation for those serving in lay leadership or bi-vocational ministry. These programs offer robust theological education for those who desire to effectively serve their local church but do not require a master's degree in their ministry context.",
+      "Our certificates and diplomas provide a solid, gospel centered foundation for those serving in lay leadership or bi-vocational ministry. These programs offer robust theological education for those who desire to effectively serve their local church but do not require a master's degree in their ministry context.",
     button: "Explore Certificates & Diplomas",
     href: "/programs/certificates",
     icon: FaCertificate,
@@ -86,7 +86,7 @@ export default function Programs() {
           >
             Bethesda Theological College offers programs designed to prepare
             pastors, Christian leaders, counselors, and believers for
-            gospel-centered service in the Church, the community, and the
+            gospel centered service in the Church, the community, and the
             marketplace.
           </Text>
         </Stack>
