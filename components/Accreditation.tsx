@@ -45,41 +45,42 @@ export default function Accreditation() {
           </Text>
 
           {/* Logos */}
-          <SimpleGrid columns={{ base: 1, md: 4 }} gap={10}>
+          <SimpleGrid
+            columns={{ base: 2, md: 4 }}
+            gap={{ base: 8, md: 12 }}
+            alignItems="center"
+          >
             {accreditations.map((item) => (
-              <Box
+              <Stack
                 key={item.name}
-                bg="white"
-                p={8}
-                borderRadius="2xl"
-                textAlign="center"
-                border="1px solid"
-                borderColor="brand.100"
+                align="center"
+                gap={4}
                 transition="all 0.25s ease"
-                filter="grayscale(100%) opacity(0.6)"
                 _hover={{
-                  transform: "translateY(-6px)",
-                  filter: "grayscale(0%) opacity(1)",
-                  borderColor: "gold.500",
-                  boxShadow: "lg",
+                  transform: "translateY(-4px)",
                 }}
               >
                 <Image
                   src={item.img}
                   alt={item.name}
-                  h="80px"
-                  mx="auto"
+                  h={{ base: "60px", md: "80px" }}
                   objectFit="contain"
+                  filter="grayscale(100%) opacity(0.6)"
+                  transition="all 0.25s ease"
+                  _hover={{
+                    filter: "grayscale(0%) opacity(1)",
+                    transform: "scale(1.05)",
+                  }}
                 />
 
                 <Heading
-                  mt={6}
                   size="sm"
                   color="brand.500"
+                  textAlign="center"
                 >
                   {item.name}
                 </Heading>
-              </Box>
+              </Stack>
             ))}
           </SimpleGrid>
         </Stack>

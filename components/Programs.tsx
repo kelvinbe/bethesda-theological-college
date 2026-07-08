@@ -93,83 +93,79 @@ export default function Programs() {
 
         {/* Program Cards */}
         <Grid
-          templateColumns={{
-            base: "1fr",
-            lg: "repeat(2, 1fr)",
-          }}
-          gap={8}
-        >
-          {programs.map((program) => (
-            <Box
-              key={program.title}
-              bg="white"
-              borderRadius="2xl"
-              p={{ base: 8, md: 10 }}
-              border="1px solid"
-              borderColor="brand.100"
-              boxShadow="lg"
-              transition="all .35s ease"
-              _hover={{
-                transform: "translateY(-8px)",
-                borderColor: "gold.500",
-                boxShadow: "2xl",
-              }}
-            >
-              <Stack h="100%" gap={6}>
-                {/* Icon */}
-                <HStack>
-                  <Box
-                    bg="brand.50"
-                    p={4}
-                    borderRadius="full"
-                  >
-                    <Icon
-                      as={program.icon}
-                      boxSize={8}
-                      color="gold.500"
-                    />
-                  </Box>
-                </HStack>
+  templateColumns={{
+    base: "1fr",
+    lg: "repeat(4, 1fr)",
+  }}
+  gap={0}
+>
+  {programs.map((program, index) => (
+  <Stack
+  key={program.title}
+  px={{ base: 0, lg: 7 }}
+  py={8}
+  gap={5}
+  align="flex-start"
+  h="100%"
+  borderRight={{
+    base: "none",
+    lg: index !== programs.length - 1 ? "1px solid" : "none",
+  }}
+  borderColor="gray.300"
+>
+  {/* Icon */}
+  <Icon
+    as={program.icon}
+    boxSize={6}
+    color="gold.500"
+  />
 
-                {/* Title */}
-                <Heading
-                  size="lg"
-                  color="brand.500"
-                >
-                  {program.title}
-                </Heading>
+  {/* Heading */}
+  <Heading
+    fontFamily="serif"
+    fontWeight="700"
+    fontSize={{ base: "xl", md: "xl" }}
+    color="brand.500"
+    lineHeight="1.25"
+  >
+    {program.title}
+  </Heading>
 
-                {/* Description */}
-                <Text
-                  color="gray.700"
-                  lineHeight="1.9"
-                  flex={1}
-                >
-                  {program.description}
-                </Text>
+  {/* Description */}
+  <Text
+    color="gray.700"
+    fontSize={{ base: "sm", md: "md" }}
+    lineHeight="1.8"
+    flex={1}
+  >
+    {program.description}
+  </Text>
 
-                {/* Button */}
-                <Button
-                  as={NextLink}
-                  href={program.href}
-                  bg="brand.500"
-                  color="white"
-                  alignSelf="flex-start"
-                  rounded="full"
-                  px={8}
-                  size="lg"
-                  rightIcon={<FaArrowRight />}
-                  _hover={{
-                    bg: "brand.600",
-                    transform: "translateX(2px)",
-                  }}
-                >
-                  {program.button}
-                </Button>
-              </Stack>
-            </Box>
-          ))}
-        </Grid>
+  {/* Button */}
+  <Button
+    as={NextLink}
+    href={program.href}
+    mt="auto"
+    bg="gold.500"
+    color="earth.500"
+    size="md"
+    px={6}
+    fontSize="sm"
+    fontWeight="600"
+    rounded="none"
+    whiteSpace="normal"
+    textAlign="center"
+    h="auto"
+    py={3}
+    _hover={{
+      bg: "gold.600",
+    }}
+  >
+    {program.button}
+  </Button>
+</Stack>
+  ))}
+</Grid>
       </Container>
     </Box>
   );

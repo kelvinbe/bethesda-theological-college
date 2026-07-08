@@ -23,7 +23,7 @@ export default function HomePage() {
       <Programs />
       <CallToAction />
       <Accreditation />
-      <QuickLinks />
+      {/* <QuickLinks /> */}
       <Partners />
 
     </>

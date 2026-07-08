@@ -11,7 +11,7 @@ export default function UtilityBar() {
     <Box 
             style={{padding: 0 }}
 
-    bg="black" color="white"  borderRadius={2} borderColor={'red'} className="" py={0}>
+    bg="brand.50" color="white"  borderRadius={2} borderColor={'red'} className="" py={0}>
 
       <Box w="auto">
         <HStack

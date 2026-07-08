@@ -14,16 +14,28 @@ import {
   IconButton,
   Drawer,
   CloseButton,
+  GridItem,
+  Stack,
+  Heading,
+  Icon
 } from "@chakra-ui/react";
 import { HiMenu } from "react-icons/hi";
 import UtilityBar from "./layout/UtilityBar";
+import {
+  FaFacebook,
+  FaInstagram,
+  FaXTwitter,
+  FaYoutube,
+  FaLinkedin,
+} from "react-icons/fa6";
+
 
 /* ================= DROPDOWN COMPONENT ================= */
 
 export function Dropdown({
   label,
   items,
-  color = "whiteAlpha.900",
+  color = "earth.900",
 }: {
   label: string;
   items: string[];
@@ -38,7 +50,7 @@ export function Dropdown({
           fontWeight="500"
           _hover={{
             textDecoration: "none",
-            color: "white",
+            color: "yellow.400",
           }}
         >
           {label}
@@ -110,7 +122,7 @@ export default function Navbar() {
   return (
     <>
       <Box position="sticky" top="0" zIndex="1000">
-        <Box bg="brand.700" boxShadow="sm">
+        <Box bg="brand.50" boxShadow="sm">
           <Container maxW="7xl">
             <HStack
               align={{ base: "stretch", md: "stretch" }}
@@ -138,7 +150,7 @@ export default function Navbar() {
                   />
 
                   <Text
-                    color="white"
+                    color="earth.700"
                     fontWeight="bold"
                     fontSize={{ base: "md", md: "2xl" }}
                     lineHeight="1.1"
@@ -147,13 +159,14 @@ export default function Navbar() {
                     Bethesda Training College
                   </Text>
                 </HStack>
+                
 
                 {/* Mobile Hamburger */}
                 <IconButton
                   display={{ base: "flex", md: "none" }}
                   aria-label="Open Menu"
                   variant="ghost"
-                  color="white"
+                  color="earth.500"
                   onClick={() => setOpen(true)}
                 >
                   <HiMenu size={28} />
@@ -166,30 +179,33 @@ export default function Navbar() {
                 display={{ base: "none", md: "block" }}
               >
                 {/* TOP BAR */}
-                <HStack
-                  justify="flex-end"
-                  gap={8}
-                  py={3}
-                  borderBottom="1px solid"
-                  borderColor="whiteAlpha.200"
-                  fontSize="sm"
-                >
-                  <Dropdown
-                    label="Login"
-                    items={loginItems}
-                    color="whiteAlpha.900"
-                  />
+          <HStack
+  justify="flex-end"
+  py={3}
+  borderBottom="1px solid"
+  borderColor="whiteAlpha.200"
+  fontSize="sm"
+>
+  <HStack gap={8}>
+    <Dropdown
+      label="Login"
+      items={loginItems}
+      color="grey.900"
+    />
 
-                  <Dropdown
-                    label="Admissions"
-                    items={admissionsItems}
-                    color="whiteAlpha.900"
-                  />
+    <Dropdown
+      label="Admissions"
+      items={admissionsItems}
+      color="grey.900"
+    />
+  </HStack>
 
-         
+  <HStack gap={2}>
+    <UtilityBar />
 
-                  <UtilityBar />
-                </HStack>
+  
+  </HStack>
+</HStack>
 
                 {/* BOTTOM BAR */}
                 <HStack
@@ -198,9 +214,9 @@ export default function Navbar() {
                   py={5}
                 >
                       <Link
-                    color="whiteAlpha.900"
+                    color="earth.900"
                     _hover={{
-                      color: "white",
+                      color: "yellow.400",
                       textDecoration: "none",
                     }}
                     href="/"
@@ -209,9 +225,9 @@ export default function Navbar() {
                     Home
                   </Link>
                   <Link
-                    color="whiteAlpha.900"
+                    color="earth.900"
                     _hover={{
-                      color: "white",
+                      color: "yellow.400",
                       textDecoration: "none",
                     }}
                     href="/about"
@@ -222,6 +238,7 @@ export default function Navbar() {
 
 
                   <Dropdown
+                  
                     label="Academics"
                     items={academics}
                   />
@@ -230,8 +247,55 @@ export default function Navbar() {
                     label="Updates"
                     items={calendar}
                   />
+                    <HStack gap={3} ml={2}>
+      <Link
+        href="https://facebook.com"
+        target="_blank"
+        color="earth.700"
+        _hover={{ color: "yellow.400" }}
+      >
+        <Icon as={FaFacebook} boxSize={4.5} />
+      </Link>
+
+      <Link
+        href="https://instagram.com"
+        target="_blank"
+        color="earth.700"
+        _hover={{ color: "yellow.400" }}
+      >
+        <Icon as={FaInstagram} boxSize={4.5} />
+      </Link>
+
+      <Link
+        href="https://x.com"
+        target="_blank"
+        color="earth.700"
+        _hover={{ color: "yellow.400" }}
+      >
+        <Icon as={FaXTwitter} boxSize={4.5} />
+      </Link>
+
+      <Link
+        href="https://youtube.com"
+        target="_blank"
+        color="earth.700"
+        _hover={{ color: "yellow.400" }}
+      >
+        <Icon as={FaYoutube} boxSize={4.5} />
+      </Link>
+
+      <Link
+        href="https://linkedin.com"
+        target="_blank"
+        color="earth.700"
+        _hover={{ color: "yellow.400" }}
+      >
+        <Icon as={FaLinkedin} boxSize={4.5} />
+      </Link>
+    </HStack>
 
                 </HStack>
+                
               </Box>
             </HStack>
           </Container>
@@ -301,10 +365,28 @@ export default function Navbar() {
                       items={admissionsItems}
                       color="white"
                     />
-
-                   
-
                       <UtilityBar />
+                          <HStack mt={5} gap={4}>
+                                    <Link href="#" _hover={{ color: "yellow.400" }}>
+                                      <Icon as={FaFacebook} boxSize={5} />
+                                    </Link>
+                      
+                                    <Link href="#" _hover={{ color: "yellow.400" }}>
+                                      <Icon as={FaInstagram} boxSize={5} />
+                                    </Link>
+                      
+                                    <Link href="#" _hover={{ color: "yellow.400" }}>
+                                      <Icon as={FaXTwitter} boxSize={5} />
+                                    </Link>
+                      
+                                    <Link href="#" _hover={{ color: "yellow.400" }}>
+                                      <Icon as={FaYoutube} boxSize={5} />
+                                    </Link>
+                      
+                                    <Link href="#" _hover={{ color: "yellow.400" }}>
+                                      <Icon as={FaLinkedin} boxSize={5} />
+                                    </Link>
+                                  </HStack>
                   </VStack>
                 </Box>
               </VStack>

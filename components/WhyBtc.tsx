@@ -46,23 +46,25 @@ export default function WhyBTC() {
           </Heading>
 
           <Text
-            fontSize="lg"
+            fontSize="xl"
             color="brand.500"
             textAlign="center"
-            maxW="4xl"
+            maxW="6xl"
             mx="auto"
             lineHeight="tall"
           >
             Across Africa, there is a vibrant and growing call to ministry,
             but a severe lack of resources to equip those who are called.
             Currently, 70% of African pastors lack formal training, and 85%
-            cannot afford the tuition of existing Bible colleges. This critical
-            gap leaves a staggering ratio of just one trained leader for every
+            cannot afford the tuition of existing Bible colleges. 
+            <Text>
+            This critical gap leaves a staggering ratio of just one trained leader for every
             600 congregants. Furthermore, traditional educational models often
             teach theology in isolation, leaving grassroots leaders without the
             practical, market-relevant skills needed to sustain their ministries
             or uplift their local economies. Bethesda Training College exists
             to rewrite this narrative.
+            </Text>
           </Text>
 
           <SimpleGrid columns={{ base: 1, md: 3 }} gap={8} mt={10}>
