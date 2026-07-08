@@ -183,7 +183,7 @@ export default function Navbar() {
   justify="flex-end"
   py={3}
   borderBottom="1px solid"
-  borderColor="whiteAlpha.200"
+  borderColor="brand.500"
   fontSize="sm"
 >
   <HStack gap={8}>

@@ -75,7 +75,7 @@ export default function CallToAction() {
             <Button
               as={NextLink}
               href="/apply"
-              variant="ghost"
+              variant="solid"
               color="white"
               rightIcon={<FaArrowRight />}
               borderBottom="1px solid"
@@ -139,7 +139,7 @@ export default function CallToAction() {
             <Button
               as={NextLink}
               href="/faculty"
-              variant="ghost"
+              variant="solid"
               color="white"
               rightIcon={<FaArrowRight />}
               borderBottom="1px solid"

@@ -12,7 +12,7 @@ import {
 const partners = [
   {
     name: "Crossway",
-    logo: "/crossway.jpeg",
+    logo: "/cross.png",
   },
   {
     name: "Intentional Discipling Africa (IDA)",
@@ -53,7 +53,7 @@ export default function Partners() {
       <Box
         position="absolute"
         inset={0}
-        bg="rgba(206, 207, 202, 0.93)"
+        bg="rgba(112, 117, 111, 0.93)"
       />
 
       {/* Content */}
@@ -61,7 +61,7 @@ export default function Partners() {
         <Stack gap={14}>
           <Heading
             textAlign="center"
-            color="yellow.700"
+            color="brand.700"
             fontSize={{ base: "2xl", md: "4xl" }}
           >
             Our Partners

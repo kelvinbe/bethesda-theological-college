@@ -25,72 +25,85 @@ import {
 
 export default function Footer() {
   return (
-    <Box bg="brand.50" color="earth.900">
-      <Container maxW="7xl">
+    <Box
+      position="relative"
+        inset={0}
+        bgImage="url('/green.png')"
+        bgSize="400px"
+        backgroundPosition="center"
+        bgRepeat="repeat"
+    >
+      {/* Light overlay */}
+      <Box
+        position="absolute"
+        inset={0}
+        bg="rgba(250,248,243,0.93)"
+        backdropFilter="blur(2px)"
+        zIndex={0}
+      />
+
+      <Container maxW="7xl" position="relative" zIndex={1}>
         {/* MAIN FOOTER */}
         <Grid
           templateColumns={{
             base: "1fr",
             md: "repeat(4, 1fr)",
           }}
-          gap={12}
+          gap={14}
           py={16}
         >
           {/* ABOUT */}
           <GridItem>
+            <Box
+              display="flex"
+              flexDir="column"
+              alignItems="center"
+              textAlign="center"
+              h="100%"
+              mt={-16}
+            >
+              <Image
+                src="/fot.png"
+                boxSize={{ base: "59px", md: "195px" }}
+                alt="Bethesda Training College"
+              />
 
-            <Box display="flex"
-    flexDir="column"
-    alignItems="center"
-    textAlign="center"
-    h="100%"
-    mt={-16}
-    
-    >
-            <Image
-              src="/fot.png"
-              boxSize={{ base: "59px", md: "95px" }}
-              alt="Bethesda Training College"
-            />
-            <Heading  justifyContent='center' color="earth.900" size="md" mb={4}>
-              Bethesda Training College
-            </Heading>
+              <Heading color="earth.900" size="md" mb={4}>
+                Bethesda Training College
+              </Heading>
 
-            <Text color="earth.300" mb={4}>
-              Rooted in the Word, Ready for the World.
-            </Text>
+              <Text color="earth.300" mb={4}>
+                Rooted in the Word, Ready for the World.
+              </Text>
 
-            <Text color="gray.600" fontSize="sm">
-              We equip pastors, ministry leaders, and believers with sound
-              biblical, theological, and practical training to serve the Church
-              and society effectively.
-            </Text>
+              <Text color="gray.700" fontSize="sm">
+                We equip pastors, ministry leaders, and believers with sound
+                biblical, theological, and practical training to serve the
+                Church and society effectively.
+              </Text>
 
-             <HStack mt={5} gap={4}>
-              <Link href="#" _hover={{ color: "yellow.400" }}>
-                <Icon as={FaFacebook} boxSize={5} />
-              </Link>
+              <HStack mt={5} gap={4}>
+                <Link href="#" _hover={{ color: "yellow.500" }}>
+                  <Icon as={FaFacebook} boxSize={5} />
+                </Link>
 
-              <Link href="#" _hover={{ color: "yellow.400" }}>
-                <Icon as={FaInstagram} boxSize={5} />
-              </Link>
+                <Link href="#" _hover={{ color: "yellow.500" }}>
+                  <Icon as={FaInstagram} boxSize={5} />
+                </Link>
 
-              <Link href="#" _hover={{ color: "yellow.400" }}>
-                <Icon as={FaXTwitter} boxSize={5} />
-              </Link>
+                <Link href="#" _hover={{ color: "yellow.500" }}>
+                  <Icon as={FaXTwitter} boxSize={5} />
+                </Link>
 
-              <Link href="#" _hover={{ color: "yellow.400" }}>
-                <Icon as={FaYoutube} boxSize={5} />
-              </Link>
+                <Link href="#" _hover={{ color: "yellow.500" }}>
+                  <Icon as={FaYoutube} boxSize={5} />
+                </Link>
 
-              <Link href="#" _hover={{ color: "yellow.400" }}>
-                <Icon as={FaLinkedin} boxSize={5} />
-              </Link>
-            </HStack>
+                <Link href="#" _hover={{ color: "yellow.500" }}>
+                  <Icon as={FaLinkedin} boxSize={5} />
+                </Link>
+              </HStack>
             </Box>
-
-            {/* SOCIALS */}
-           
           </GridItem>
 
           {/* QUICK LINKS */}
@@ -100,19 +113,23 @@ export default function Footer() {
             </Heading>
 
             <Stack gap={2}>
-              <Link as={NextLink} href="/about" color="gray.500">
+              <Link as={NextLink} href="/about" color="gray.700">
                 About Us
               </Link>
-              <Link as={NextLink} href="/" color="gray.500">
+
+              <Link as={NextLink} href="/" color="gray.700">
                 Admissions
               </Link>
-              <Link as={NextLink} href="/" color="gray.500">
+
+              <Link as={NextLink} href="/" color="gray.700">
                 Contact
               </Link>
-              <Link as={NextLink} href="/" color="gray.500">
+
+              <Link as={NextLink} href="/" color="gray.700">
                 News & Events
               </Link>
-              <Link as={NextLink} href="/" color="gray.500">
+
+              <Link as={NextLink} href="/" color="gray.700">
                 Student Portal
               </Link>
             </Stack>
@@ -125,11 +142,11 @@ export default function Footer() {
             </Heading>
 
             <Stack gap={2}>
-              <Text color="gray.500">Diploma in Theology</Text>
-              <Text color="gray.500">Bachelor of Theology</Text>
-              <Text color="gray.500">Masters in Divinity</Text>
-              <Text color="gray.500">Church Leadership</Text>
-              <Text color="gray.500">Christian Counseling</Text>
+              <Text color="gray.700">Diploma in Theology</Text>
+              <Text color="gray.700">Bachelor of Theology</Text>
+              <Text color="gray.700">Masters in Divinity</Text>
+              <Text color="gray.700">Church Leadership</Text>
+              <Text color="gray.700">Christian Counseling</Text>
             </Stack>
           </GridItem>
 
@@ -140,13 +157,13 @@ export default function Footer() {
             </Heading>
 
             <Stack gap={2}>
-              <Text color="gray.500">Matuu, Machakos County</Text>
+              <Text color="gray.700">Matuu, Machakos County</Text>
 
-              <Text color="gray.500">info@bethesdacollege.org</Text>
+              <Text color="gray.700">info@bethesdacollege.org</Text>
 
-              <Text color="gray.500">+254 XXX XXX XXX</Text>
+              <Text color="gray.700">+254 XXX XXX XXX</Text>
 
-              <Text color="gray.500" fontSize="sm" mt={2}>
+              <Text color="gray.700" fontSize="sm" mt={2}>
                 Office Hours: Mon - Fri (8:00 AM - 5:00 PM)
               </Text>
 
@@ -157,51 +174,45 @@ export default function Footer() {
           </GridItem>
         </Grid>
 
-        {/* DIVIDER LINE */}
-        <Box borderTop="1px solid rgba(255,255,255,0.1)" />
+        {/* Divider */}
+        <Box borderTop="1px solid rgba(0,0,0,0.12)" />
 
-        {/* BOTTOM BAR */}
+        {/* Bottom Bar */}
         <Box
           py={6}
           display="flex"
-          flexDirection={{
-            base: "column",
-            md: "row",
-          }}
+          flexDirection={{ base: "column", md: "row" }}
           justifyContent="space-between"
-          alignItems={{
-            base: "flex-start",
-            md: "center",
-          }}
+          alignItems={{ base: "flex-start", md: "center" }}
           gap={4}
         >
-          <Text color="gray.500" fontSize="sm">
-            © {new Date().getFullYear()} Bethesda Theological College. All
-            Rights Reserved.
+          <Text color="gray.700" fontSize="sm">
+            © {new Date().getFullYear()} Bethesda Training College. All Rights
+            Reserved.
           </Text>
 
           <HStack gap={6} flexWrap="wrap">
-            <Link href="/privacy-policy" color="gray.500">
+            <Link href="/privacy-policy" color="gray.700">
               Privacy Policy
             </Link>
 
-            <Link href="/terms" color="gray.500">
+            <Link href="/terms" color="gray.700">
               Terms of Use
             </Link>
 
-            <Link href="/accessibility" color="gray.500">
+            <Link href="/accessibility" color="gray.700">
               Accessibility
             </Link>
 
             <Text
               fontSize="sm"
-              color="gray.500"
+              color="gray.700"
               display="flex"
               alignItems="center"
               gap={1}
             >
               Made with{" "}
-              <Box as="span" color="red.400">
+              <Box as="span" color="red.500">
                 ♥
               </Box>{" "}
               by Beno

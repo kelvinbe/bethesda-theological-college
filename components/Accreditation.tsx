@@ -13,8 +13,8 @@ import {
 const accreditations = [
   { name: "TVETA", img: "tiveta.png" },
   { name: "EAK", img: "eak.png" },
-  { name: "ISO Certification", img: "iso.jpeg" },
-  { name: "KCPA", img: "kpca.jpeg" },
+  { name: "ISO Certification", img: "iso.png" },
+  { name: "KCPA", img: "kpca.png" },
 ];
 
 export default function Accreditation() {
@@ -78,7 +78,7 @@ export default function Accreditation() {
                   color="brand.500"
                   textAlign="center"
                 >
-                  {item.name}
+                  {/* {item.name} */}
                 </Heading>
               </Stack>
             ))}

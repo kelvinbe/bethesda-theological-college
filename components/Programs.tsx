@@ -100,18 +100,28 @@ export default function Programs() {
   gap={0}
 >
   {programs.map((program, index) => (
-  <Stack
+<Stack
   key={program.title}
+  position="relative"
   px={{ base: 0, lg: 7 }}
   py={8}
   gap={5}
   align="flex-start"
   h="100%"
-  borderRight={{
-    base: "none",
-    lg: index !== programs.length - 1 ? "1px solid" : "none",
-  }}
-  borderColor="gray.300"
+  _after={
+    index !== programs.length - 1
+      ? {
+          content: '""',
+          position: "absolute",
+          right: 0,
+          top: "50%",
+          transform: "translateY(-50%)",
+          width: "1px",
+          height: "180px", // Short divider
+          bg: "brand.500",
+        }
+      : {}
+  }
 >
   {/* Icon */}
   <Icon
@@ -142,27 +152,30 @@ export default function Programs() {
   </Text>
 
   {/* Button */}
-  <Button
-    as={NextLink}
-    href={program.href}
-    mt="auto"
-    bg="gold.500"
-    color="earth.500"
-    size="md"
-    px={6}
-    fontSize="sm"
-    fontWeight="600"
-    rounded="none"
-    whiteSpace="normal"
-    textAlign="center"
-    h="auto"
-    py={3}
-    _hover={{
-      bg: "gold.600",
-    }}
-  >
-    {program.button}
-  </Button>
+ <Button
+  as={NextLink}
+  href={program.href}
+  mt="auto"
+  variant="solid"
+  borderColor="gold.500"
+  color="white"
+  backgroundColor='gold.600'
+  borderRadius="lg"
+  px={6}
+  py={3}
+  h="auto"
+  fontSize="sm"
+  fontWeight="600"
+  rightIcon={<FaArrowRight />}
+  transition="all .3s"
+  _hover={{
+    // bg: "gold.500",
+    color: "gold.300",
+    borderColor: "brand.500",
+  }}
+>
+  {program.button}
+</Button>
 </Stack>
   ))}
 </Grid>
