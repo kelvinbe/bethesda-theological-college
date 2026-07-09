@@ -64,7 +64,7 @@ export default function Footer() {
             >
               <Image
                 src="/fot.png"
-                boxSize={{ base: "59px", md: "195px" }}
+                w={{ base: "170px", sm: "200px", md: "195px", lg: "220px" }}
                 alt="Bethesda Training College"
               />
 
