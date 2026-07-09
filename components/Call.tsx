@@ -75,14 +75,15 @@ export default function CallToAction() {
             <Button
               as={NextLink}
               href="/apply"
-              variant="solid"
-              color="white"
+              variant="solid"              
               rightIcon={<FaArrowRight />}
-              borderBottom="1px solid"
               borderRadius="0"
+              rounded={'1xl'}
+              size="lg"
+              color="earth.500"
+              backgroundColor="gold.500"
               _hover={{
-                bg: "transparent",
-                color: "gold.500",
+                color: "white",
               }}
             >
               CONTACT US TO APPLY
@@ -140,13 +141,13 @@ export default function CallToAction() {
               as={NextLink}
               href="/faculty"
               variant="solid"
-              color="white"
               rightIcon={<FaArrowRight />}
-              borderBottom="1px solid"
-              borderRadius="0"
+               rounded={'1xl'}
+              size="lg"
+              color="earth.500"
+              backgroundColor="gold.500"
               _hover={{
-                bg: "transparent",
-                color: "gold.500",
+                color: "white",
               }}
             >
               LEARN MORE

@@ -118,10 +118,11 @@ export default function WhyBTC() {
                   <Button
                     mt={6}
                     alignSelf="flex-start"
-                    bg="gold.500"
-                    color="white"
+                     bg="gold.500"
+                      color="earth.500"
                     size="md"
                     _hover={{
+                      color: 'white',
                       bg: "gold.600",
                     }}
                   >

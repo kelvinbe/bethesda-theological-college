@@ -167,7 +167,15 @@ export default function Footer() {
                 Office Hours: Mon - Fri (8:00 AM - 5:00 PM)
               </Text>
 
-              <Button mt={3} colorScheme="yellow" size="sm" width="fit-content">
+              <Button mt={3}
+              size="lg"
+              variant="outline"
+              borderColor="gold.500"
+              color="gold.500"
+              _hover={{
+                bg: "gold.500",
+                color: "earth.500",
+              }}>
                 Partner With Us
               </Button>
             </Stack>

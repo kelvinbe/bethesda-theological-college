@@ -93,92 +93,89 @@ export default function Programs() {
 
         {/* Program Cards */}
         <Grid
-  templateColumns={{
-    base: "1fr",
-    lg: "repeat(4, 1fr)",
-  }}
-  gap={0}
->
-  {programs.map((program, index) => (
-<Stack
-  key={program.title}
-  position="relative"
-  px={{ base: 0, lg: 7 }}
-  py={8}
-  gap={5}
-  align="flex-start"
-  h="100%"
-  _after={
-    index !== programs.length - 1
-      ? {
-          content: '""',
-          position: "absolute",
-          right: 0,
-          top: "50%",
-          transform: "translateY(-50%)",
-          width: "1px",
-          height: "180px", // Short divider
-          bg: "brand.500",
-        }
-      : {}
-  }
->
-  {/* Icon */}
-  <Icon
-    as={program.icon}
-    boxSize={6}
-    color="gold.500"
-  />
+          templateColumns={{
+            base: "1fr",
+            lg: "repeat(4, 1fr)",
+          }}
+          gap={{ base: 10, lg: 0 }}
+        >
+          {programs.map((program, index) => (
+            <Stack
+              key={program.title}
+              position="relative"
+              px={{ base: 0, lg: 7 }}
+              py={8}
+              gap={5}
+              align="flex-start"
+              h="100%"
+              _after={
+                index !== programs.length - 1
+                  ? {
+                      content: '""',
+                      display: { base: "none", lg: "block" },
+                      position: "absolute",
+                      right: 0,
+                      top: "50%",
+                      transform: "translateY(-50%)",
+                      width: "1px",
+                      height: "180px",
+                      bg: "brand.500",
+                    }
+                  : {}
+              }
+            >
+              {/* Icon */}
+              <Icon
+                as={program.icon}
+                boxSize={6}
+                color="gold.500"
+              />
 
-  {/* Heading */}
-  <Heading
-    fontFamily="serif"
-    fontWeight="700"
-    fontSize={{ base: "xl", md: "xl" }}
-    color="brand.500"
-    lineHeight="1.25"
-  >
-    {program.title}
-  </Heading>
+              {/* Heading */}
+              <Heading
+                fontFamily="serif"
+                fontWeight="700"
+                fontSize={{ base: "xl", md: "xl" }}
+                color="brand.500"
+                lineHeight="1.25"
+              >
+                {program.title}
+              </Heading>
 
-  {/* Description */}
-  <Text
-    color="gray.700"
-    fontSize={{ base: "sm", md: "md" }}
-    lineHeight="1.8"
-    flex={1}
-  >
-    {program.description}
-  </Text>
+              {/* Description */}
+              <Text
+                color="gray.700"
+                fontSize={{ base: "sm", md: "md" }}
+                lineHeight="1.8"
+                flex={1}
+              >
+                {program.description}
+              </Text>
 
-  {/* Button */}
- <Button
-  as={NextLink}
-  href={program.href}
-  mt="auto"
-  variant="solid"
-  borderColor="gold.500"
-  color="white"
-  backgroundColor='gold.600'
-  borderRadius="lg"
-  px={6}
-  py={3}
-  h="auto"
-  fontSize="sm"
-  fontWeight="600"
-  rightIcon={<FaArrowRight />}
-  transition="all .3s"
-  _hover={{
-    // bg: "gold.500",
-    color: "gold.300",
-    borderColor: "brand.500",
-  }}
->
-  {program.button}
-</Button>
-</Stack>
-  ))}
-</Grid>
+              {/* Button */}
+              <Button
+                as={NextLink}
+                href={program.href}
+                mt="auto"
+                bg="gold.500"
+                color="earth.500"
+                borderRadius="lg"
+                px={6}
+                py={3}
+                h="auto"
+                fontSize="sm"
+                fontWeight="600"
+                rightIcon={<FaArrowRight />}
+                transition="all .3s"
+                _hover={{
+                  color: "white",
+                }}
+              >
+                {program.button}
+              </Button>
+            </Stack>
+          ))}
+        </Grid>
       </Container>
     </Box>
   );

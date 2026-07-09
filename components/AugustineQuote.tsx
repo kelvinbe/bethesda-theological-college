@@ -76,6 +76,9 @@ export default function AugustineQuote() {
             bg="gold.500"
             color="earth.500"
             size="md"
+            _hover={{
+              color: 'white'
+            }}
           >
             Read our Doctrinal Statement
           </Button>

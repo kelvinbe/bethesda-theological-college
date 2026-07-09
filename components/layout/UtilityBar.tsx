@@ -22,15 +22,19 @@ export default function UtilityBar() {
         >
 
       <Button
-            size="sm"
-            bg="gold.500"
-            color="black"
-            w={{ base: "full", md: "auto" }}
-          >
+              size="lg"
+              variant="outline"
+              borderColor="gold.500"
+              color="gold.500"
+              _hover={{
+                bg: "gold.500",
+                color: "earth.500",
+              }}
+            >
          <Dropdown
                       label="Partner"
                       items={partner}
-                      color="white"
+                      color="earth.500"
                     />
                     </Button>
         </HStack>

@@ -96,7 +96,9 @@ export default function HeroVideo() {
               size="lg"
               bg="gold.500"
               color="earth.500"
-              _hover={{ opacity: 0.9 }}
+              _hover={{ 
+                color: 'white',
+                opacity: 0.9 }}
             >
               Apply Now
             </Button>
