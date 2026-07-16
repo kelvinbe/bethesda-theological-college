@@ -130,7 +130,7 @@ export default function Navbar() {
         href="https://facebook.com"
         target="_blank"
         color="white"
-        _hover={{ color: "brand.100" }}
+        _hover={{ color: "yellow.500" }}
       >
         <Icon as={FaFacebook} boxSize={4} />
       </Link>
@@ -139,7 +139,7 @@ export default function Navbar() {
         href="https://instagram.com"
         target="_blank"
         color="white"
-        _hover={{ color: "brand.100" }}
+        _hover={{ color: "yellow.500" }}
       >
         <Icon as={FaInstagram} boxSize={4} />
       </Link>
@@ -148,7 +148,7 @@ export default function Navbar() {
         href="https://x.com"
         target="_blank"
         color="white"
-        _hover={{ color: "brand.100" }}
+        _hover={{ color: "yellow.500" }}
       >
         <Icon as={FaXTwitter} boxSize={4} />
       </Link>
@@ -157,7 +157,7 @@ export default function Navbar() {
         href="https://youtube.com"
         target="_blank"
         color="white"
-        _hover={{ color: "brand.100" }}
+        _hover={{ color: "yellow.500" }}
       >
         <Icon as={FaYoutube} boxSize={4} />
       </Link>
@@ -166,7 +166,7 @@ export default function Navbar() {
         href="https://linkedin.com"
         target="_blank"
         color="white"
-        _hover={{ color: "brand.100" }}
+        _hover={{ color: "yellow.500" }}
       >
         <Icon as={FaLinkedin} boxSize={4} />
       </Link>
