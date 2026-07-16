@@ -122,6 +122,57 @@ export default function Navbar() {
   return (
     <>
       <Box position="sticky" top="0" zIndex="1000">
+        {/* TOP SOCIAL BAR */}
+<Box bg="brand.500" color="white">
+  <Container maxW="7xl">
+    <HStack justify="flex-end" py={2} gap={4}>
+      <Link
+        href="https://facebook.com"
+        target="_blank"
+        color="white"
+        _hover={{ color: "brand.100" }}
+      >
+        <Icon as={FaFacebook} boxSize={4} />
+      </Link>
+
+      <Link
+        href="https://instagram.com"
+        target="_blank"
+        color="white"
+        _hover={{ color: "brand.100" }}
+      >
+        <Icon as={FaInstagram} boxSize={4} />
+      </Link>
+
+      <Link
+        href="https://x.com"
+        target="_blank"
+        color="white"
+        _hover={{ color: "brand.100" }}
+      >
+        <Icon as={FaXTwitter} boxSize={4} />
+      </Link>
+
+      <Link
+        href="https://youtube.com"
+        target="_blank"
+        color="white"
+        _hover={{ color: "brand.100" }}
+      >
+        <Icon as={FaYoutube} boxSize={4} />
+      </Link>
+
+      <Link
+        href="https://linkedin.com"
+        target="_blank"
+        color="white"
+        _hover={{ color: "brand.100" }}
+      >
+        <Icon as={FaLinkedin} boxSize={4} />
+      </Link>
+    </HStack>
+  </Container>
+</Box>
         <Box bg="brand.50" boxShadow="sm">
           <Container maxW="7xl">
             <HStack
@@ -152,11 +203,11 @@ export default function Navbar() {
                   <Text
                     color="earth.700"
                     fontWeight="bold"
-                    fontSize={{ base: "md", md: "2xl" }}
+                    fontSize={{ base: "md", md: "34px" }}
                     lineHeight="1.1"
                     fontFamily="serif"
                   >
-                    Bethesda Training College
+                    Bethesda Training College(BTC)
                   </Text>
                 </HStack>
                 
@@ -247,53 +298,6 @@ export default function Navbar() {
                     label="Updates"
                     items={calendar}
                   />
-                    <HStack gap={3} ml={2}>
-      <Link
-        href="https://facebook.com"
-        target="_blank"
-        color="earth.700"
-        _hover={{ color: "yellow.400" }}
-      >
-        <Icon as={FaFacebook} boxSize={4.5} />
-      </Link>
-
-      <Link
-        href="https://instagram.com"
-        target="_blank"
-        color="earth.700"
-        _hover={{ color: "yellow.400" }}
-      >
-        <Icon as={FaInstagram} boxSize={4.5} />
-      </Link>
-
-      <Link
-        href="https://x.com"
-        target="_blank"
-        color="earth.700"
-        _hover={{ color: "yellow.400" }}
-      >
-        <Icon as={FaXTwitter} boxSize={4.5} />
-      </Link>
-
-      <Link
-        href="https://youtube.com"
-        target="_blank"
-        color="earth.700"
-        _hover={{ color: "yellow.400" }}
-      >
-        <Icon as={FaYoutube} boxSize={4.5} />
-      </Link>
-
-      <Link
-        href="https://linkedin.com"
-        target="_blank"
-        color="earth.700"
-        _hover={{ color: "yellow.400" }}
-      >
-        <Icon as={FaLinkedin} boxSize={4.5} />
-      </Link>
-    </HStack>
-
                 </HStack>
                 
               </Box>

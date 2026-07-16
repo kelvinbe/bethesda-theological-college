@@ -22,10 +22,6 @@ export default function HomePage() {
       <MinistryCall />
       <Programs />
       <CallToAction />
-      <Accreditation />
-      {/* <QuickLinks /> */}
-      <Partners />
-
     </>
   );
 }

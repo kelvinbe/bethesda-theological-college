@@ -43,7 +43,7 @@ export default function Partners() {
       <Box
         position="absolute"
         inset={0}
-        bgImage="url('/pattern.png')"
+        // bgImage="url('/pattern.png')"
         bgSize="400px"
         backgroundPosition="center"
         bgRepeat="repeat"

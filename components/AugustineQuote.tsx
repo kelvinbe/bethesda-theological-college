@@ -40,7 +40,7 @@ export default function AugustineQuote() {
 
           <Text
             color="white"
-            fontSize={{ base: "md", md: "xl" }}
+            fontSize={{ base: "md", md: "lg" }}
             fontStyle="italic"
             textAlign="center"
           >

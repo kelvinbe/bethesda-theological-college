@@ -20,7 +20,7 @@ const cards = [
   },
   {
     title: "Sustainable Impact",
-    image: "sustain2.jpg",
+    image: "sus1.jpg",
     description:
       "Our graduates do not leave dependent on ongoing financial aid; they graduate with actionable, TVET-accredited skills to serve both the Church and the marketplace.",
   },
@@ -34,7 +34,22 @@ const cards = [
 
 export default function WhyBTC() {
   return (
-    <Box py={24} bg="white">
+    <Box py={24} bg="white"
+    
+      position="relative"
+        inset={0}
+        bgImage="url('/green.png')"
+        bgSize="400px"
+        backgroundPosition="center"
+        bgRepeat="repeat"
+    >
+         <Box
+        position="absolute"
+        inset={0}
+        bg="rgba(250,248,243,0.93)"
+        backdropFilter="blur(2px)"
+        zIndex={0}
+      />
       <Container maxW="7xl">
         <Stack gap={8}>
           <Heading
@@ -78,6 +93,7 @@ export default function WhyBTC() {
                 shadow="lg"
                 bg="white"
                 display="flex"
+                fontSize={'md'}
                 flexDirection="column"
                 transition="all 0.3s"
                 _hover={{
@@ -89,8 +105,9 @@ export default function WhyBTC() {
                   src={card.image}
                   alt={card.title}
                   w="100%"
-                  h="220px"
-                  objectFit="cover"
+                  // h="220px"
+  aspectRatio={4 / 3}
+  objectFit="cover"
                 />
 
                 <Box
