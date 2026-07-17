@@ -16,9 +16,9 @@ import {
   Image,
   SimpleGrid,
   VStack,
-    Wrap,
+  Wrap,
   WrapItem,
-  IconButton
+  IconButton,
 } from "@chakra-ui/react";
 import {
   FaFacebook,
@@ -26,12 +26,9 @@ import {
   FaXTwitter,
   FaYoutube,
   FaLinkedin,
-  FaArrowUp
+  FaArrowUp,
 } from "react-icons/fa6";
 import { useState, useEffect } from "react";
-
-
-
 
 const accreditations = [
   { name: "TVETA", img: "/tiveta.png" },
@@ -48,44 +45,35 @@ const partners = [
   { name: "Christianbook", logo: "/cb.png" },
 ];
 
-
-
-
 export default function Footer() {
+  const [showButton, setShowButton] = useState(false);
 
-const [showButton, setShowButton] = useState(false);
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowButton(window.scrollY > 300);
+    };
 
+    window.addEventListener("scroll", handleScroll);
 
-useEffect(() => {
-  const handleScroll = () => {
-    setShowButton(window.scrollY > 300);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
   };
-
-  window.addEventListener("scroll", handleScroll);
-
-  return () => window.removeEventListener("scroll", handleScroll);
-}, []);
-
-const scrollToTop = () => {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth",
-  });
-};
-
-
-
-
-
 
   return (
     <Box
       position="relative"
-        inset={0}
-        // bgImage="url('/green.png')"
-        bgSize="400px"
-        backgroundPosition="center"
-        bgRepeat="repeat"
+      inset={0}
+      // bgImage="url('/green.png')"
+      bgSize="400px"
+      backgroundPosition="center"
+      bgRepeat="repeat"
+      bg="brand.50"
     >
       {/* Light overlay */}
       {/* <Box
@@ -103,7 +91,8 @@ const scrollToTop = () => {
             base: "1fr",
             md: "repeat(4, 1fr)",
           }}
-          gap={14}
+          gap={110}
+          ml={-20}
           py={16}
         >
           {/* ABOUT */}
@@ -221,15 +210,17 @@ const scrollToTop = () => {
                 Office Hours: Mon - Fri (8:00 AM - 5:00 PM)
               </Text>
 
-              <Button mt={3}
-              size="lg"
-              variant="outline"
-              borderColor="gold.500"
-              color="gold.500"
-              _hover={{
-                bg: "gold.500",
-                color: "earth.500",
-              }}>
+              <Button
+                mt={3}
+                size="lg"
+                variant="outline"
+                borderColor="gold.500"
+                color="gold.500"
+                _hover={{
+                  bg: "gold.500",
+                  color: "earth.500",
+                }}
+              >
                 Partner With Us
               </Button>
             </Stack>
@@ -238,172 +229,163 @@ const scrollToTop = () => {
 
         {/* Divider */}
         {/* Divider */}
-<Box borderTop="1px solid rgba(0,0,0,0.12)" />
+        <Box borderTop="1px solid rgba(0,0,0,0.12)" />
 
-{/* Trust Section */}
-<Box py={{ base: 12, md: 16 }}>
-  <Stack gap={12} align="center">
-    {/* Accreditation */}
-      <Text
-        fontSize="sm"
-        letterSpacing="0.25em"
-        textTransform="uppercase"
-        color="gray.500"
-        fontWeight="600"
-      >
-        Accreditation & Recognition
-      </Text>
+        {/* Trust Section */}
+        <Box py={{ base: 12, md: 16 }}>
+          <Stack gap={12} align="center">
+            {/* Accreditation */}
+            <Text
+              fontSize="sm"
+              letterSpacing="0.25em"
+              textTransform="uppercase"
+              color="gray.500"
+              fontWeight="600"
+            >
+              Accreditation & Recognition
+            </Text>
 
-{/* Desktop */}
-<Box
-  display={{ base: "none", md: "flex" }}
-  justifyContent="space-between"
-  alignItems="center"
-  w="full"
->
-  {accreditations.map((acc) => (
-    <Box
-      key={acc.name}
-      flex="1"
-      display="flex"
-      justifyContent="center"
-    >
-      <Image
-        src={acc.img}
-        alt={acc.name}
-        maxH="80px"
-        maxW="150px"
-        objectFit="contain"
-        filter="grayscale(100%) opacity(.7)"
-        transition="all .3s"
-        _hover={{
-          filter: "grayscale(0%) opacity(1)",
-          transform: "scale(1.05)",
-        }}
-      />
-    </Box>
-  ))}
-</Box>
+            {/* Desktop */}
+            <Box
+              display={{ base: "none", md: "flex" }}
+              justifyContent="space-between"
+              alignItems="center"
+              w="full"
+            >
+              {accreditations.map((acc) => (
+                <Box
+                  key={acc.name}
+                  flex="1"
+                  display="flex"
+                  justifyContent="center"
+                >
+                  <Image
+                    src={acc.img}
+                    alt={acc.name}
+                    maxH="80px"
+                    maxW="150px"
+                    objectFit="contain"
+                    filter="grayscale(100%) opacity(.7)"
+                    transition="all .3s"
+                    _hover={{
+                      filter: "grayscale(0%) opacity(1)",
+                      transform: "scale(1.05)",
+                    }}
+                  />
+                </Box>
+              ))}
+            </Box>
 
-{/* Mobile */}
-<SimpleGrid
-  display={{ base: "grid", md: "none" }}
-  columns={2}
-  gap={8}
-  w="full"
->
-  {accreditations.map((acc) => (
-    <Box
-      key={acc.name}
-      display="flex"
-      justifyContent="center"
-      alignItems="center"
-    >
-      <Image
-        src={acc.img}
-        alt={acc.name}
-        maxH="60px"
-        maxW="120px"
-        objectFit="contain"
-           filter="grayscale(100%) opacity(.7)"
-        transition="all .3s"
-        _hover={{
-          filter: "grayscale(0%) opacity(1)",
-          transform: "scale(1.05)",
-        }}
-      />
-    </Box>
-  ))}
-</SimpleGrid>
+            {/* Mobile */}
+            <SimpleGrid
+              display={{ base: "grid", md: "none" }}
+              columns={2}
+              gap={8}
+              w="full"
+            >
+              {accreditations.map((acc) => (
+                <Box
+                  key={acc.name}
+                  display="flex"
+                  justifyContent="center"
+                  alignItems="center"
+                >
+                  <Image
+                    src={acc.img}
+                    alt={acc.name}
+                    maxH="60px"
+                    maxW="120px"
+                    objectFit="contain"
+                    filter="grayscale(100%) opacity(.7)"
+                    transition="all .3s"
+                    _hover={{
+                      filter: "grayscale(0%) opacity(1)",
+                      transform: "scale(1.05)",
+                    }}
+                  />
+                </Box>
+              ))}
+            </SimpleGrid>
 
-    {/* Divider */}
-    <Box
-      w="full"
-      h="1px"
-      bg="green.500"
-      borderRadius="full"
-    />
+            {/* Divider */}
+            <Box w="full" h="1px" bg="green.500" borderRadius="full" />
 
-    {/* Partners */}
-      <Text
-        fontSize="sm"
-        letterSpacing="0.25em"
-        textTransform="uppercase"
-        color="gray.500"
-        fontWeight="600"
-      >
-        Our Partners
-      </Text>
+            {/* Partners */}
+            <Text
+              fontSize="sm"
+              letterSpacing="0.25em"
+              textTransform="uppercase"
+              color="gray.500"
+              fontWeight="600"
+            >
+              Our Partners
+            </Text>
 
+            {/* Desktop */}
+            <Box
+              display={{ base: "none", md: "flex" }}
+              justifyContent="space-between"
+              alignItems="center"
+              w="full"
+            >
+              {partners.map((par) => (
+                <Box
+                  key={par.name}
+                  flex="1"
+                  display="flex"
+                  justifyContent="center"
+                >
+                  <Image
+                    src={par.logo}
+                    alt={par.name}
+                    maxH="80px"
+                    maxW="150px"
+                    objectFit="contain"
+                    filter="grayscale(100%) opacity(.7)"
+                    transition="all .3s"
+                    _hover={{
+                      filter: "grayscale(0%) opacity(1)",
+                      transform: "scale(1.05)",
+                    }}
+                  />
+                </Box>
+              ))}
+            </Box>
 
-      {/* Desktop */}
-<Box
-  display={{ base: "none", md: "flex" }}
-  justifyContent="space-between"
-  alignItems="center"
-  w="full"
->
-  {partners.map((par) => (
-    <Box
-      key={par.name}
-      flex="1"
-      display="flex"
-      justifyContent="center"
-    >
-      <Image
-        src={par.logo}
-        alt={par.name}
-        maxH="80px"
-        maxW="150px"
-        objectFit="contain"
-        filter="grayscale(100%) opacity(.7)"
-        transition="all .3s"
-        _hover={{
-          filter: "grayscale(0%) opacity(1)",
-          transform: "scale(1.05)",
-        }}
-      />
-    </Box>
-  ))}
-</Box>
+            <SimpleGrid
+              display={{ base: "grid", md: "none" }}
+              columns={2}
+              gap={8}
+              w="full"
+            >
+              {partners.map((partner) => (
+                <Box
+                  key={partner.name}
+                  flex="1"
+                  display="flex"
+                  justifyContent="center"
+                >
+                  <Image
+                    src={partner.logo}
+                    alt={partner.name}
+                    maxH="80px"
+                    maxW="150px"
+                    objectFit="contain"
+                    filter="grayscale(100%) opacity(.7)"
+                    transition="all .3s"
+                    _hover={{
+                      filter: "grayscale(0%) opacity(1)",
+                      transform: "scale(1.05)",
+                    }}
+                  />
+                </Box>
+              ))}
+            </SimpleGrid>
+          </Stack>
+        </Box>
 
-      
-
-<SimpleGrid
-  display={{ base: "grid", md: "none" }}
-  columns={2}
-  gap={8}
-  w="full"
->
-  {partners.map((partner) => (
-    <Box
-      key={partner.name}
-      flex="1"
-      display="flex"
-      justifyContent="center"
-    >
-      <Image
-        src={partner.logo}
-        alt={partner.name}
-        maxH="80px"
-        maxW="150px"
-        objectFit="contain"
-         filter="grayscale(100%) opacity(.7)"
-        transition="all .3s"
-        _hover={{
-          filter: "grayscale(0%) opacity(1)",
-          transform: "scale(1.05)",
-        }}
-      />
-    </Box>
-  ))}
-</SimpleGrid>
-    </Stack>
-</Box>
-
-
-{/* Divider */}
-<Box borderTop="1px solid rgba(0,0,0,0.12)" />
+        {/* Divider */}
+        <Box borderTop="1px solid rgba(0,0,0,0.12)" />
 
         {/* Bottom Bar */}
         <Box
@@ -448,31 +430,30 @@ const scrollToTop = () => {
           </HStack>
         </Box>
       </Container>
-   { showButton &&  (<IconButton
-  aria-label="Scroll to top"
-  onClick={scrollToTop}
-  position="fixed"
-  bottom={{ base: 5, md: 8 }}
-  right={{ base: 5, md: 8 }}
-  borderRadius="full"
-  size="lg"
-  bg="gold.500"
-  color="white"
-  shadow="xl"
-  zIndex={1000}
-  _hover={{
-    bg: "gold.600",
-    transform: "translateY(-3px)",
-  }}
-  _active={{
-    transform: "translateY(0)",
-  }}
->
-
-  <FaArrowUp />
-  </ IconButton>)
-
-}
+      {showButton && (
+        <IconButton
+          aria-label="Scroll to top"
+          onClick={scrollToTop}
+          position="fixed"
+          bottom={{ base: 5, md: 8 }}
+          right={{ base: 5, md: 8 }}
+          borderRadius="full"
+          size="lg"
+          bg="gold.500"
+          color="white"
+          shadow="xl"
+          zIndex={1000}
+          _hover={{
+            bg: "gold.600",
+            transform: "translateY(-3px)",
+          }}
+          _active={{
+            transform: "translateY(0)",
+          }}
+        >
+          <FaArrowUp />
+        </IconButton>
+      )}
     </Box>
   );
 }

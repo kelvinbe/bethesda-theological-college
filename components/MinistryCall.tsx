@@ -51,7 +51,7 @@ export default function MinistryCall() {
               src="/pray.jpeg"
               alt="Prayer"
               w="full"
-              h={{ base: "400px", lg: "520px" }}
+              h={{ base: "500px", lg: "715px" }}
               objectFit="cover"
               borderRadius="2xl"
               boxShadow="xl"
