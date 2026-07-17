@@ -106,8 +106,8 @@ export default function WhyBTC() {
                   alt={card.title}
                   w="100%"
                   // h="220px"
-  aspectRatio={4 / 3}
-  objectFit="cover"
+                  aspectRatio={4 / 3}
+                  objectFit="cover"
                 />
 
                 <Box

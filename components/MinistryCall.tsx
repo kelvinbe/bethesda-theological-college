@@ -22,15 +22,7 @@ export default function MinistryCall() {
         >
           {/* LEFT SIDE */}
           <Stack flex={1} w="full" gap={8}>
-            <Image
-              src="/pray.jpeg"
-              alt="Prayer"
-              w="full"
-              h={{ base: "400px", lg: "520px" }}
-              objectFit="cover"
-              borderRadius="2xl"
-              boxShadow="xl"
-            />
+         
 
             <Stack gap={5}>
               <Text
@@ -52,45 +44,36 @@ export default function MinistryCall() {
                 Discern Your Call to Ministry
               </Heading>
 
-              <Text
-                color="gray.600"
-                fontSize="md"
-                lineHeight="2"
-              >
-                Ministry is more than a profession—it is a calling from God.
-                We walk alongside students through spiritual formation,
-                rigorous theological study, and practical ministry preparation
-                so they can faithfully serve Christ and His Church with wisdom,
-                conviction, and humility.
-              </Text>
+           
             </Stack>
 
             <Image
-              src="/disern.jpg"
-              alt="Discernment"
+              src="/pray.jpeg"
+              alt="Prayer"
               w="full"
-              h={{ base: "350px", lg: "430px" }}
+              h={{ base: "400px", lg: "520px" }}
               objectFit="cover"
               borderRadius="2xl"
               boxShadow="xl"
             />
-
-            <Button
-              size="lg"
+     <Button
+              size="md"
               bg="gold.500"
               color="earth.500"
               w="full"
               maxW={{ lg: "430px" }}
-
-              py={7}
+              py={8}
               fontSize="md"
+              whiteSpace="normal"
+              textAlign="center"
               _hover={{
                 color: "white",
                 opacity: 0.9,
               }}
             >
-              Apply Now
+              How can you tell for certain you are called?
             </Button>
+   
           </Stack>
 
           {/* RIGHT SIDE */}
@@ -137,6 +120,11 @@ export default function MinistryCall() {
                 lineHeight="2"
                 color="gray.600"
               >
+                Ministry is more than a profession—it is a calling from God.
+                We walk alongside students through spiritual formation,
+                rigorous theological study, and practical ministry preparation
+                so they can faithfully serve Christ and His Church with wisdom,
+                conviction, and humility.
                 Explore your calling through prayer, theological education,
                 and faithful service. Our programs are designed to equip
                 future ministry leaders with biblical knowledge and practical
@@ -144,22 +132,21 @@ export default function MinistryCall() {
               </Text>
             </Box>
 
-                    <Button
-              size="md"
+            <Button
+              size="lg"
               bg="gold.500"
               color="earth.500"
               w="full"
               maxW={{ lg: "430px" }}
-              py={8}
+
+              py={7}
               fontSize="md"
-              whiteSpace="normal"
-              textAlign="center"
               _hover={{
                 color: "white",
                 opacity: 0.9,
               }}
             >
-              How can you tell for certain you are called?
+              Apply Now
             </Button>
           </Stack>
         </HStack>
