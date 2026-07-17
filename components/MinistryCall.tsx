@@ -120,7 +120,7 @@ export default function MinistryCall() {
                 lineHeight="2"
                 color="gray.600"
               >
-                Ministry is more than a profession—it is a calling from God.
+                Ministry is more than a profession, it is a calling from God.
                 We walk alongside students through spiritual formation,
                 rigorous theological study, and practical ministry preparation
                 so they can faithfully serve Christ and His Church with wisdom,
