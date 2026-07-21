@@ -34,53 +34,92 @@ const cards = [
 
 export default function WhyBTC() {
   return (
-    <Box py={24} bg="white"
-    
-      position="relative"
-        inset={0}
-        bgImage="url('/green.png')"
-        bgSize="400px"
-        backgroundPosition="center"
-        bgRepeat="repeat"
-    >
-         <Box
-        position="absolute"
-        inset={0}
-        bg="rgba(250,248,243,0.93)"
-        backdropFilter="blur(2px)"
-        zIndex={0}
-      />
+ <Box
+  py={{ base: 20, lg: 24 }}
+  bgImage="url('/green.png')"
+  bgSize="220px"
+  bgRepeat={'repeat'}
+  bgPosition="center"
+  position="relative"
+  
+>
+  <Box
+    position="absolute"
+    inset={0}
+    bg="rgba(252,250,245,0.92)"
+    zIndex={0}
+  />
       <Container maxW="7xl">
         <Stack gap={8}>
           <Heading
-            color="gold.500"
-            textAlign="center"
-            fontSize={{ base: "2xl", md: "4xl" }}
-          >
-            Why BTC?
-          </Heading>
+  textAlign="center"
+  fontWeight="900"
+  color="brand.500"
+  lineHeight={0.9}
+  letterSpacing="-0.04em"
+  fontSize={{
+    base: "4xl",
+    md: "6xl",
+    lg: "8xl",
+  }}
+>
+  Why
+  BTC?
+</Heading>
 
-          <Text
-            fontSize="xl"
-            color="brand.500"
-            textAlign="center"
-            maxW="6xl"
-            mx="auto"
-            lineHeight="tall"
-          >
-            Across Africa, there is a vibrant and growing call to ministry,
-            but a severe lack of resources to equip those who are called.
-            Currently, 70% of African pastors lack formal training, and 85%
-            cannot afford the tuition of existing Bible colleges. 
-            <Text>
-            This critical gap leaves a staggering ratio of just one trained leader for every
-            600 congregants. Furthermore, traditional educational models often
-            teach theology in isolation, leaving grassroots leaders without the
-            practical, market-relevant skills needed to sustain their ministries
-            or uplift their local economies. Bethesda Training College exists
-            to rewrite this narrative.
-            </Text>
-          </Text>
+          <Stack
+  maxW="700px"
+  mx="auto"
+  textAlign="center"
+  color="brand.500"
+  gap={6}
+  fontSize={{
+    base: "md",
+    md: "xl",
+  }}
+  lineHeight="1.8"
+  fontWeight="500"
+>
+  <Text>
+    Across Africa, there is a vibrant and growing call to ministry, but a
+    severe lack of resources to equip those who are called.
+  </Text>
+
+  <Text>
+    Currently,{" "}
+    <Text as="span" color="gold.500" fontWeight="700">
+      70%
+    </Text>{" "}
+    of African pastors lack formal training, and{" "}
+    <Text as="span" color="gold.500" fontWeight="700">
+      85%
+    </Text>{" "}
+    cannot afford the tuition of existing Bible colleges.
+  </Text>
+
+  <Text>
+    This critical gap leaves a staggering ratio of just one trained leader
+    for every 600 congregants.
+  </Text>
+
+  <Text>
+    Furthermore, traditional educational models often teach theology in
+    isolation, leaving grassroots leaders without the practical,
+    market-relevant skills needed to sustain their ministries or uplift their
+    local economies.
+  </Text>
+
+  <Text
+    color="gold.500"
+    fontWeight="800"
+    fontSize={{
+      base: "xl",
+      md: "2xl",
+    }}
+  >
+    Bethesda Training College exists to rewrite this narrative.
+  </Text>
+</Stack>
 
           <SimpleGrid columns={{ base: 1, md: 3 }} gap={8} mt={10}>
             {cards.map((card) => (

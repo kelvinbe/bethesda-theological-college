@@ -92,7 +92,8 @@ export default function Footer() {
             md: "repeat(4, 1fr)",
           }}
           gap={110}
-          ml={-20}
+          ml={{ base: 0, lg: -20 }}
+
           py={16}
         >
           {/* ABOUT */}
