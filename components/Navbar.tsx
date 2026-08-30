@@ -50,7 +50,7 @@ export function Dropdown({
           fontWeight="500"
           _hover={{
             textDecoration: "none",
-            color: "yellow.400",
+            // color: "yellow.400",
           }}
         >
           {label}
@@ -124,7 +124,7 @@ export default function Navbar() {
       <Box position="sticky" top="0" zIndex="1000">
         {/* TOP SOCIAL BAR */}
 <Box bg="brand.500" color="white">
-  <Container maxW="7xl">
+  <Container maxW="8xl">
     <HStack justify="flex-end" py={2} gap={4}>
       <Link
         href="https://facebook.com"
@@ -174,7 +174,7 @@ export default function Navbar() {
   </Container>
 </Box>
         <Box bg="brand.50" boxShadow="sm">
-          <Container maxW="7xl">
+          <Container maxW="8xl">
             <HStack
               align={{ base: "stretch", md: "stretch" }}
               justify="space-between"
@@ -196,7 +196,7 @@ export default function Navbar() {
                 >
                   <Image
                     src="/beth.png"
-                    boxSize={{ base: "55px", md: "90px" }}
+                    boxSize={{ base: "55px", md: "130px" }}
                     alt="Bethesda Training College"
                   />
 

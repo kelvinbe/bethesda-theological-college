@@ -16,8 +16,6 @@ import {
   Image,
   SimpleGrid,
   VStack,
-  Wrap,
-  WrapItem,
   IconButton,
 } from "@chakra-ui/react";
 import {
@@ -69,86 +67,55 @@ export default function Footer() {
     <Box
       position="relative"
       inset={0}
-      // bgImage="url('/green.png')"
       bgSize="400px"
       backgroundPosition="center"
       bgRepeat="repeat"
       bg="brand.50"
     >
-      {/* Light overlay */}
-      {/* <Box
-        position="absolute"
-        inset={0}
-        bg="rgba(250,248,243,0.93)"
-        backdropFilter="blur(2px)"
-        zIndex={0}
-      /> */}
-
       <Container maxW="7xl" position="relative" zIndex={1}>
         {/* MAIN FOOTER */}
         <Grid
           templateColumns={{
             base: "1fr",
-            md: "repeat(4, 1fr)",
+            md: "repeat(5, 1fr)",
           }}
-          gap={110}
-          ml={{ base: 0, lg: -20 }}
-
+          gap={{ base: 10, md: 8, lg: 10 }}
+          ml={{ base: 0, lg: -10 }}
           py={16}
         >
           {/* ABOUT */}
-          <GridItem>
-            <Box
-              display="flex"
-              flexDir="column"
-              alignItems="center"
-              textAlign="center"
-              h="100%"
-              mt={-16}
-            >
-              <Image
-                src="/fot.png"
-                w={{ base: "380px", sm: "200px", md: "195px", lg: "250px" }}
-                alt="Bethesda Training College"
-              />
+        <GridItem justifySelf="start">
+  <Box
+    display="flex"
+    flexDir="column"
+    alignItems="flex-start"
+    textAlign="left"
+    h="100%"
+    mt={{ base: 0, md: -19 }}
+  >
+    <Image
 
-              <Heading color="earth.900" size="md" mb={4}>
-                Bethesda Training College
-              </Heading>
+        src="/fot.png"
+  w={{ base: "280px", sm: "200px", md: "195px", lg: "220px" }}
+  alt="Bethesda Training College"
+  ml={{ base: "-70px", sm: "-50px", md: "-55px", lg: "-75px" }}
+    />
 
-              <Text color="earth.300" mb={4}>
-                Rooted in the Word, Ready for the World.
-              </Text>
+    <Heading color="earth.900" size="md" mb={4}>
+      Bethesda Training College
+    </Heading>
 
-              <Text color="gray.700" fontSize="sm">
-                We equip pastors, ministry leaders, and believers with sound
-                biblical, theological, and practical training to serve the
-                Church and society effectively.
-              </Text>
+    <Text color="earth.300" mb={4}>
+      Rooted in the Word, Ready for the World.
+    </Text>
 
-              <HStack mt={5} gap={4}>
-                <Link href="#" _hover={{ color: "yellow.500" }}>
-                  <Icon as={FaFacebook} boxSize={5} />
-                </Link>
-
-                <Link href="#" _hover={{ color: "yellow.500" }}>
-                  <Icon as={FaInstagram} boxSize={5} />
-                </Link>
-
-                <Link href="#" _hover={{ color: "yellow.500" }}>
-                  <Icon as={FaXTwitter} boxSize={5} />
-                </Link>
-
-                <Link href="#" _hover={{ color: "yellow.500" }}>
-                  <Icon as={FaYoutube} boxSize={5} />
-                </Link>
-
-                <Link href="#" _hover={{ color: "yellow.500" }}>
-                  <Icon as={FaLinkedin} boxSize={5} />
-                </Link>
-              </HStack>
-            </Box>
-          </GridItem>
+    <Text color="gray.700" fontSize="sm">
+      We equip pastors, ministry leaders, and believers with sound
+      biblical, theological, and practical training to serve the
+      Church and society effectively.
+    </Text>
+  </Box>
+</GridItem>
 
           {/* QUICK LINKS */}
           <GridItem>
@@ -226,15 +193,52 @@ export default function Footer() {
               </Button>
             </Stack>
           </GridItem>
+
+          {/* CONNECT WITH US */}
+          <GridItem>
+            <Heading size="sm" mb={4}>
+              Connect With Us
+            </Heading>
+
+            <HStack gap={4} flexWrap="wrap">
+              <Link href="#" _hover={{ color: "yellow.500" }}>
+                <Icon as={FaFacebook} boxSize={5} />
+              </Link>
+
+              <Link href="#" _hover={{ color: "yellow.500" }}>
+                <Icon as={FaInstagram} boxSize={5} />
+              </Link>
+
+              <Link href="#" _hover={{ color: "yellow.500" }}>
+                <Icon as={FaXTwitter} boxSize={5} />
+              </Link>
+
+              <Link href="#" _hover={{ color: "yellow.500" }}>
+                <Icon as={FaYoutube} boxSize={5} />
+              </Link>
+
+              <Link href="#" _hover={{ color: "yellow.500" }}>
+                <Icon as={FaLinkedin} boxSize={5} />
+              </Link>
+            </HStack>
+
+            <Text
+              color="earth.300"
+              fontSize="sm"
+              mt={5}
+              lineHeight="1.6"
+            >
+              Rooted in the Word, Ready for the World.
+            </Text>
+          </GridItem>
         </Grid>
 
         {/* Divider */}
-        {/* Divider */}
-        <Box borderTop="1px solid rgba(0,0,0,0.12)" />
+        <Box borderTop="1px solid" borderColor="brand.500" />
 
         {/* Trust Section */}
-        <Box py={{ base: 12, md: 16 }}>
-          <Stack gap={12} align="center">
+        <Box py={{ base: 10, md: 10 }}>
+          <Stack gap={10} align="center">
             {/* Accreditation */}
             <Text
               fontSize="sm"
@@ -309,7 +313,7 @@ export default function Footer() {
             </SimpleGrid>
 
             {/* Divider */}
-            <Box w="full" h="1px" bg="green.500" borderRadius="full" />
+            <Box w="full" h="1px" bg="brand.500" borderRadius="full" />
 
             {/* Partners */}
             <Text
@@ -335,12 +339,28 @@ export default function Footer() {
                   flex="1"
                   display="flex"
                   justifyContent="center"
+                  alignItems="center"
                 >
                   <Image
                     src={par.logo}
                     alt={par.name}
-                    maxH="80px"
-                    maxW="150px"
+                    /*
+                     * Increased Ligonier and Injili/KPCA visual sizing.
+                     * maxH/maxW give the logos more room while
+                     * objectFit keeps their aspect ratio.
+                     */
+                    maxH={
+                      par.name === "Ligonier" ||
+                      par.name === "Injili Ministries"
+                        ? "105px"
+                        : "80px"
+                    }
+                    maxW={
+                      par.name === "Ligonier" ||
+                      par.name === "Injili Ministries"
+                        ? "180px"
+                        : "150px"
+                    }
                     objectFit="contain"
                     filter="grayscale(100%) opacity(.7)"
                     transition="all .3s"
@@ -353,6 +373,7 @@ export default function Footer() {
               ))}
             </Box>
 
+            {/* Mobile */}
             <SimpleGrid
               display={{ base: "grid", md: "none" }}
               columns={2}
@@ -362,15 +383,25 @@ export default function Footer() {
               {partners.map((partner) => (
                 <Box
                   key={partner.name}
-                  flex="1"
                   display="flex"
                   justifyContent="center"
+                  alignItems="center"
                 >
                   <Image
                     src={partner.logo}
                     alt={partner.name}
-                    maxH="80px"
-                    maxW="150px"
+                    maxH={
+                      partner.name === "Ligonier" ||
+                      partner.name === "Injili Ministries"
+                        ? "100px"
+                        : "80px"
+                    }
+                    maxW={
+                      partner.name === "Ligonier" ||
+                      partner.name === "Injili Ministries"
+                        ? "170px"
+                        : "150px"
+                    }
                     objectFit="contain"
                     filter="grayscale(100%) opacity(.7)"
                     transition="all .3s"
@@ -386,23 +417,23 @@ export default function Footer() {
         </Box>
 
         {/* Divider */}
-        <Box borderTop="1px solid rgba(0,0,0,0.12)" />
+        <Box borderTop="1px solid" borderColor="brand.500" />
 
         {/* Bottom Bar */}
         <Box
-          py={6}
+          py={4}
           display="flex"
           flexDirection={{ base: "column", md: "row" }}
           justifyContent="space-between"
           alignItems={{ base: "flex-start", md: "center" }}
           gap={4}
         >
-          <Text color="gray.700" fontSize="sm">
+          <Text fontSize="smaller" color="gray.700" fontSize="sm">
             © {new Date().getFullYear()} Bethesda Training College. All Rights
             Reserved.
           </Text>
 
-          <HStack gap={6} flexWrap="wrap">
+          <HStack fontSize="smaller" gap={6} flexWrap="wrap">
             <Link href="/privacy-policy" color="gray.700">
               Privacy Policy
             </Link>
@@ -416,7 +447,7 @@ export default function Footer() {
             </Link>
 
             <Text
-              fontSize="sm"
+              fontSize="smaller"
               color="gray.700"
               display="flex"
               alignItems="center"
@@ -431,6 +462,7 @@ export default function Footer() {
           </HStack>
         </Box>
       </Container>
+
       {showButton && (
         <IconButton
           aria-label="Scroll to top"

@@ -9,7 +9,7 @@ const partner = ["Adjunct Faculty", "Donate Books", "Give"];
 export default function UtilityBar() {
   return (
     <Box 
-            style={{padding: 0 }}
+    style={{padding: 0 }}
 
     bg="brand.50" color="white"  borderRadius={2} borderColor={'red'} className="" py={0}>
 
@@ -22,7 +22,7 @@ export default function UtilityBar() {
         >
 
       <Button
-              size="lg"
+               size="lg"
               variant="outline"
               borderColor="gold.500"
               color="gold.500"
@@ -32,9 +32,10 @@ export default function UtilityBar() {
               }}
             >
          <Dropdown
-                      label="Partner"
+                      label="Partner With Us"
                       items={partner}
                       color="earth.500"
+                      _
                     />
                     </Button>
         </HStack>
