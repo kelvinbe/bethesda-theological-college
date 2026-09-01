@@ -61,7 +61,6 @@ export default function MinistryCall() {
               bg="gold.500"
               color="earth.500"
               w="full"
-              maxW={{ lg: "430px" }}
               py={8}
               fontSize="md"
               whiteSpace="normal"
@@ -95,7 +94,6 @@ export default function MinistryCall() {
               w="full"
               py={8}
               fontSize="md"
-              maxW={{ lg: "430px" }}
 
               whiteSpace="normal"
               textAlign="center"
@@ -137,7 +135,6 @@ export default function MinistryCall() {
               bg="gold.500"
               color="earth.500"
               w="full"
-              maxW={{ lg: "430px" }}
 
               py={7}
               fontSize="md"

@@ -428,21 +428,21 @@ export default function Footer() {
           alignItems={{ base: "flex-start", md: "center" }}
           gap={4}
         >
-          <Text fontSize="smaller" color="gray.700" fontSize="sm">
+          <Text fontSize="x-small" color="gray.700" >
             © {new Date().getFullYear()} Bethesda Training College. All Rights
             Reserved.
           </Text>
 
           <HStack fontSize="smaller" gap={6} flexWrap="wrap">
-            <Link href="/privacy-policy" color="gray.700">
+            <Link fontSize="smaller" href="/privacy-policy" color="gray.700">
               Privacy Policy
             </Link>
 
-            <Link href="/terms" color="gray.700">
+            <Link fontSize="smaller" href="/terms" color="gray.700">
               Terms of Use
             </Link>
 
-            <Link href="/accessibility" color="gray.700">
+            <Link fontSize="smaller" href="/accessibility" color="gray.700">
               Accessibility
             </Link>
 
