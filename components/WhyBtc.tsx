@@ -45,7 +45,7 @@ export default function WhyBTC() {
       <Box
         position="absolute"
         inset={0}
-        bg="rgba(252,250,245,0.92)"
+        bg="rgba(252, 250, 245, 0.94)"
         zIndex={0}
       />
 
