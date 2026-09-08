@@ -105,9 +105,6 @@ export default function Footer() {
       Bethesda Training College
     </Heading>
 
-    <Text color="earth.300" mb={4}>
-      Rooted in the Word, Ready for the World.
-    </Text>
 
     <Text color="gray.700" fontSize="sm">
       We equip pastors, ministry leaders, and believers with sound
