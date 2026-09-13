@@ -22,8 +22,6 @@ export default function MinistryCall() {
         >
           {/* LEFT SIDE */}
           <Stack flex={1} w="full" gap={8}>
-         
-
             <Stack gap={5}>
               <Text
                 color="gold.500"
@@ -43,8 +41,6 @@ export default function MinistryCall() {
               >
                 Discern Your Call to Ministry
               </Heading>
-
-           
             </Stack>
 
             <Image
@@ -56,11 +52,15 @@ export default function MinistryCall() {
               borderRadius="2xl"
               boxShadow="xl"
             />
-     <Button
-              size="md"
+
+            {/* SWAPPED BUTTON */}
+            <Button
+              size="lg"
               bg="gold.500"
               color="earth.500"
               w="full"
+              minH="72px"
+              px={6}
               py={8}
               fontSize="md"
               whiteSpace="normal"
@@ -70,9 +70,8 @@ export default function MinistryCall() {
                 opacity: 0.9,
               }}
             >
-              How can you tell for certain you are called?
+              What does it mean to be called to ministry?
             </Button>
-   
           </Stack>
 
           {/* RIGHT SIDE */}
@@ -87,14 +86,16 @@ export default function MinistryCall() {
               boxShadow="xl"
             />
 
+            {/* SWAPPED BUTTON */}
             <Button
               size="lg"
               bg="gold.500"
               color="earth.500"
               w="full"
+              minH="72px"
+              px={6}
               py={8}
               fontSize="md"
-
               whiteSpace="normal"
               textAlign="center"
               _hover={{
@@ -102,12 +103,10 @@ export default function MinistryCall() {
                 opacity: 0.9,
               }}
             >
-              What does it mean to be called to ministry?
+              How can you tell for certain you are called?
             </Button>
 
-   
-
-            {/* White space/content block from sketch */}
+            {/* CONTENT BLOCK */}
             <Box
               minH={{ lg: "260px" }}
               display="flex"
@@ -130,14 +129,18 @@ export default function MinistryCall() {
               </Text>
             </Box>
 
+            {/* APPLY NOW */}
             <Button
               size="lg"
               bg="gold.500"
               color="earth.500"
               w="full"
-
+              minH="72px"
+              px={6}
               py={7}
               fontSize="md"
+              whiteSpace="normal"
+              textAlign="center"
               _hover={{
                 color: "white",
                 opacity: 0.9,
@@ -151,3 +154,4 @@ export default function MinistryCall() {
     </Box>
   );
 }
+
