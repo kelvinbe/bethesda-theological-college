@@ -50,7 +50,7 @@ export function Dropdown({
         <Link
          color={color}
     cursor="pointer"
-    fontWeight="500"
+    // fontWeight="500"
     textDecoration="none"
     _hover={{
       color: triggerHoverColor,

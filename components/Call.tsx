@@ -86,7 +86,7 @@ export default function CallToAction() {
                 color: "white",
               }}
             >
-              CONTACT US TO APPLY
+              APPLY NOW
             </Button>
           </VStack>
 
