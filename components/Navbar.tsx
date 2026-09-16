@@ -210,13 +210,13 @@ export default function Navbar() {
                   />
 
                   <Text
-                    color="black"
+                    color="#204e08"
                     fontWeight="bold"
                     fontSize={{ base: "md", md: "34px" }}
                     lineHeight="1.1"
                     fontFamily="serif"
                   >
-                    Bethesda Training College(BTC)
+                    Bethesda Training College
                   </Text>
                 </HStack>
 
@@ -250,13 +250,13 @@ export default function Navbar() {
                     <Dropdown
                       label="Login"
                       items={loginItems}
-                      color="grey.900"
+                      color="#204e08"
                     />
 
                     <Dropdown
                       label="Admissions"
                       items={admissionsItems}
-                      color="grey.900"
+                      color="#204e08"
                     />
                   </HStack>
 
@@ -272,7 +272,7 @@ export default function Navbar() {
                   py={3}
                 >
                   <Link
-                    color="earth.900"
+                    color="#204e08"
                     _hover={{
                       color: "yellow.400",
                       textDecoration: "none",
@@ -283,7 +283,7 @@ export default function Navbar() {
                   </Link>
 
                   <Link
-                    color="earth.900"
+                    color="#204e08"
                     _hover={{
                       color: "yellow.400",
                       textDecoration: "none",
@@ -296,11 +296,13 @@ export default function Navbar() {
                   <Dropdown
                     label="Academics"
                     items={academics}
+                    color="#204e08"
                   />
 
                   <Dropdown
                     label="Updates"
                     items={calendar}
+                    color="#204e08"
                   />
                 </HStack>
 

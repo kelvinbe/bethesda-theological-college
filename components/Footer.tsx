@@ -169,14 +169,6 @@ export default function Footer() {
                   COLLEGE TITLE
                   ================================================= */}
 
-              <Heading
-                color="#000000"
-                size="md"
-                mb={3}
-              >
-                Bethesda Training College
-              </Heading>
-
               {/* =================================================
                   DESCRIPTION
                   ================================================= */}
@@ -184,7 +176,7 @@ export default function Footer() {
               <Text
                 color="gray.700"
                 fontSize="sm"
-                lineHeight="1.7"
+                lineHeight="1.0"
               >
                 We equip pastors, ministry leaders, and believers with
                 sound biblical, theological, and practical training to
@@ -201,7 +193,7 @@ export default function Footer() {
             <Heading
               size="sm"
               mb={3}
-              color="#000000"
+              color="#204e08"
               textTransform="uppercase"
             >
               QUICKLINKS
@@ -258,7 +250,7 @@ export default function Footer() {
             <Heading
               size="sm"
               mb={3}
-              color="#000000"
+              color="#204e08"
               textTransform="uppercase"
             >
               COURSES
@@ -295,7 +287,7 @@ export default function Footer() {
             <Heading
               size="sm"
               mb={3}
-              color="#000000"
+              color="#204e08"
               textTransform="uppercase"
             >
               CONTACT
@@ -410,7 +402,7 @@ export default function Footer() {
             <Heading
               size="sm"
               mb={3}
-              color="#000000"
+              color="#204e08"
               textTransform="uppercase"
             >
               CONNECT WITH US
@@ -573,7 +565,7 @@ export default function Footer() {
               fontSize="sm"
               letterSpacing="0.25em"
               textTransform="uppercase"
-              color="#000000"
+              color="#204e08"
               fontWeight="600"
               textAlign="center"
             >
