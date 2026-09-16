@@ -33,21 +33,32 @@ export function Dropdown({
   label,
   items,
   color = "earth.900",
+  hoverBg = "gray.100",
+  hoverColor = "earth.500",
+  triggerHoverColor,
 }: {
-  label: string;
+   label: string;
   items: string[];
   color?: string;
+  hoverBg?: string;
+  hoverColor?: string;
+  triggerHoverColor?: string;
 }) {
   return (
     <Popover.Root>
       <Popover.Trigger asChild>
         <Link
-          color={color}
-          cursor="pointer"
-          fontWeight="500"
-          _hover={{
-            textDecoration: "none",
-          }}
+         color={color}
+    cursor="pointer"
+    fontWeight="500"
+    textDecoration="none"
+    _hover={{
+      color: triggerHoverColor,
+      textDecoration: "none",
+    }}
+      _groupHover={{
+    color: triggerHoverColor,
+  }}
         >
           {label}
         </Link>
@@ -199,7 +210,7 @@ export default function Navbar() {
                   />
 
                   <Text
-                    color="earth.700"
+                    color="black"
                     fontWeight="bold"
                     fontSize={{ base: "md", md: "34px" }}
                     lineHeight="1.1"

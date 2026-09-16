@@ -1,4 +1,3 @@
-
 "use client";
 
 import NextLink from "next/link";
@@ -110,7 +109,11 @@ export default function Footer() {
       bgRepeat="repeat"
       bg="brand.50"
     >
-      <Container maxW="100rem" position="relative" zIndex={1}>
+      <Container
+        maxW="109rem"
+        position="relative"
+        zIndex={1}
+      >
         {/* =====================================================
             MAIN FOOTER
             ===================================================== */}
@@ -120,14 +123,12 @@ export default function Footer() {
             base: "1fr",
             md: "repeat(5, 1fr)",
           }}
-          gap={{ base: 10, md: 9, lg: 10 }}
-          ml={{ base: 0, lg: -10 }}
-          py={16}
+          gap={{ base: 6, md: 6, lg: 7 }}
+          ml={0}
+          py={{ base: 8, md: 9 }}
         >
           {/* ===================================================
               ABOUT
-
-              LOGO HAS BEEN LEFT EXACTLY AS PROVIDED
               =================================================== */}
 
           <GridItem justifySelf="start">
@@ -138,40 +139,56 @@ export default function Footer() {
               textAlign="left"
               h="100%"
               mt={{ base: 0, md: -19 }}
+              w="100%"
             >
-              <Image
-                src="/fot.png"
+              {/* =================================================
+                  FOOTER LOGO
+                  ================================================= */}
+
+              <Box
                 w={{
-                  base: "280px",
-                  sm: "280px",
-                  md: "255px",
-                  lg: "260px",
+                  base: "150px",
+                  md: "170px",
+                  lg: "270px",
                 }}
-                alt="Bethesda Training College"
+                overflow="visible"
                 ml={{
-                  base: "-70px",
-                  sm: "-50px",
+                  base: 0,
                   md: "-55px",
-                  lg: "-75px",
                 }}
-              />
+              >
+                <Image
+                  src="/fot.png"
+                  w="370px"
+                  alt="Bethesda Training College"
+                  objectFit="contain"
+                />
+              </Box>
+
+              {/* =================================================
+                  COLLEGE TITLE
+                  ================================================= */}
 
               <Heading
-                color="earth.900"
+                color="#000000"
                 size="md"
-                mb={4}
+                mb={3}
               >
                 Bethesda Training College
               </Heading>
+
+              {/* =================================================
+                  DESCRIPTION
+                  ================================================= */}
 
               <Text
                 color="gray.700"
                 fontSize="sm"
                 lineHeight="1.7"
               >
-                We equip pastors, ministry leaders, and believers with sound
-                biblical, theological, and practical training to serve the
-                Church and society effectively.
+                We equip pastors, ministry leaders, and believers with
+                sound biblical, theological, and practical training to
+                serve the Church and society effectively.
               </Text>
             </Box>
           </GridItem>
@@ -183,8 +200,8 @@ export default function Footer() {
           <GridItem>
             <Heading
               size="sm"
-              mb={4}
-              color="earth.900"
+              mb={3}
+              color="#000000"
               textTransform="uppercase"
             >
               QUICKLINKS
@@ -240,8 +257,8 @@ export default function Footer() {
           <GridItem>
             <Heading
               size="sm"
-              mb={4}
-              color="earth.900"
+              mb={3}
+              color="#000000"
               textTransform="uppercase"
             >
               COURSES
@@ -277,14 +294,14 @@ export default function Footer() {
           <GridItem>
             <Heading
               size="sm"
-              mb={4}
-              color="earth.900"
+              mb={3}
+              color="#000000"
               textTransform="uppercase"
             >
               CONTACT
             </Heading>
 
-            <Stack gap={3}>
+            <Stack gap={2}>
               {/* Location */}
 
               <HStack
@@ -392,8 +409,8 @@ export default function Footer() {
           <GridItem>
             <Heading
               size="sm"
-              mb={4}
-              color="earth.900"
+              mb={3}
+              color="#000000"
               textTransform="uppercase"
             >
               CONNECT WITH US
@@ -502,16 +519,15 @@ export default function Footer() {
               </Link>
             </HStack>
 
-            {/* Partner With Us
-                Moved from CONTACT to CONNECT WITH US */}
+            {/* Partner With Us */}
 
             <Button
-              mt={6}
-              size="lg"
+              mt={4}
+              size="md"
               variant="outline"
               borderColor="gold.500"
               color="gold.500"
-              px={7}
+              px={6}
               _hover={{
                 bg: "gold.500",
                 color: "earth.500",
@@ -520,10 +536,12 @@ export default function Footer() {
               Partner With Us
             </Button>
 
+            {/* Tagline */}
+
             <Text
               color="earth.300"
               fontSize="sm"
-              mt={5}
+              mt={4}
               lineHeight="1.6"
             >
               Rooted in the Word, Ready for the World.
@@ -544,9 +562,9 @@ export default function Footer() {
             RECOGNITION & PARTNERS
             ===================================================== */}
 
-        <Box py={{ base: 10, md: 10 }}>
+        <Box py={{ base: 6, md: 7 }}>
           <Stack
-            gap={10}
+            gap={6}
             align="center"
           >
             {/* Section Heading */}
@@ -555,7 +573,7 @@ export default function Footer() {
               fontSize="sm"
               letterSpacing="0.25em"
               textTransform="uppercase"
-              color="gray.500"
+              color="#000000"
               fontWeight="600"
               textAlign="center"
             >
@@ -583,15 +601,15 @@ export default function Footer() {
                   display="flex"
                   justifyContent="center"
                   alignItems="center"
-                  minH="100px"
+                  minH="75px"
                 >
                   <Image
                     src={item.img}
                     alt={item.name}
                     maxH={
                       item.large
-                        ? "105px"
-                        : "80px"
+                        ? "95px"
+                        : "70px"
                     }
                     maxW={
                       item.large
@@ -621,7 +639,7 @@ export default function Footer() {
                 md: "none",
               }}
               columns={2}
-              gap={8}
+              gap={6}
               w="full"
             >
               {recognitionPartners.map((item) => (
@@ -630,15 +648,15 @@ export default function Footer() {
                   display="flex"
                   justifyContent="center"
                   alignItems="center"
-                  minH="90px"
+                  minH="70px"
                 >
                   <Image
                     src={item.img}
                     alt={item.name}
                     maxH={
                       item.large
-                        ? "95px"
-                        : "70px"
+                        ? "90px"
+                        : "65px"
                     }
                     maxW={
                       item.large
@@ -789,4 +807,3 @@ export default function Footer() {
     </Box>
   );
 }
-

@@ -70,7 +70,8 @@ export default function MinistryCall() {
                 opacity: 0.9,
               }}
             >
-              What does it mean to be called to ministry?
+              Apply Now
+              
             </Button>
           </Stack>
 
@@ -108,7 +109,7 @@ export default function MinistryCall() {
 
             {/* CONTENT BLOCK */}
             <Box
-              minH={{ lg: "260px" }}
+              minH={{ lg: "250px" }}
               display="flex"
               alignItems="center"
             >
@@ -146,7 +147,8 @@ export default function MinistryCall() {
                 opacity: 0.9,
               }}
             >
-              Apply Now
+              What does it mean to be called to ministry?
+            
             </Button>
           </Stack>
         </HStack>

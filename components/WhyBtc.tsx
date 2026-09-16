@@ -37,7 +37,7 @@ export default function WhyBTC() {
     <Box
       py={{ base: 20, lg: 24 }}
       bgImage="url('/green.png')"
-      bgSize="1700px"
+      bgSize="2500px"
       bgRepeat="repeat"
       position="relative"
     >

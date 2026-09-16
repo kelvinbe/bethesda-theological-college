@@ -20,23 +20,22 @@ export default function UtilityBar() {
           flexWrap={{ base: "wrap", md: "nowrap" }}
           fontSize={{ base: "sm", md: "md" }}
         >
-
-      <Button
-               size="lg"
-              variant="outline"
-              borderColor="gold.500"
-              color="gold.500"
-              _hover={{
-                bg: "gold.500",
-                color: "earth.500",
-              }}
-            >
-         <Dropdown
-                      label="Partner With Us"
-                      items={partner}
-                      color="earth.500"
-                      _
-                    />
+<Button
+  className="group"
+  size="md"
+  variant="outline"
+  borderColor="gold.500"
+  _hover={{
+    bg: "gold.500",
+    color: "earth.500"
+  }}
+>
+          <Dropdown
+    label="Partner With Us"
+    items={partner}
+    color="gold.500"
+    triggerHoverColor="earth.500"
+  />
                     </Button>
         </HStack>
       </Box>
